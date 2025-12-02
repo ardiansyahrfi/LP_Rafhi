@@ -19,18 +19,18 @@
       border-radius: 16px;
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
     }
-   .badge {
-  display: block;              
-  width: fit-content;          
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #14a36d;
-  background: #ffffff;
-  padding: 6px 14px;
-  border-radius: 999px;
-  margin: 0 auto 16px;         
-}
+    .badge {
+      display: block;
+      width: fit-content;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #14a36d;
+      background: #ffffff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin: 0 auto 16px;
+    }
 
     h1 {
       font-size: 26px;
@@ -723,7 +723,7 @@
       padding: 14px 16px;
       display: flex;
       align-items: center;
-      justify-content: center;   /* center icon + text */
+      justify-content: center;
       gap: 10px;
       box-shadow: 0 12px 30px rgba(16, 185, 129, 0.3);
     }
@@ -751,8 +751,8 @@
     }
     .pricing-limit-box {
       margin-top: 16px;
-      max-width: 420px;          /* kotak kuning lebih sempit */
-      margin-left: auto;         /* center */
+      max-width: 420px;
+      margin-left: auto;
       margin-right: auto;
       background: #fef3c7;
       border-radius: 14px;
@@ -1053,6 +1053,31 @@
       font-size: 12px;
       color: #6b7280;
       margin-top: 2px;
+    }
+
+    /* TOMBOL ORDER SEKARANG DI DALAM CHECKOUT */
+    .final-order-btn-wrap {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .final-order-btn {
+      width: 100%;
+      max-width: 520px;
+      padding: 14px 32px;
+      border-radius: 8px;
+      border: none;
+      background: #03a9f4;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(3, 169, 244, 0.4);
+    }
+    .final-order-btn:hover {
+      opacity: 0.95;
     }
 
     @media (max-width: 640px) {
@@ -1637,9 +1662,17 @@
                   </div>
                 </div>
               </div>
-            </div>  
+            </div>
           </label>
         </div>
+
+        <!-- TOMBOL ORDER SEKARANG DI DALAM CHECKOUT -->
+        <div class="final-order-btn-wrap">
+          <button type="submit" class="final-order-btn">
+            ORDER SEKARANG
+          </button>
+        </div>
+
       </form>
     </section>
   </main>
