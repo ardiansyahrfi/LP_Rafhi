@@ -1085,6 +1085,143 @@
         padding: 20px 14px 24px;
       }
     }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-section {
+      margin-top: 32px;
+    }
+    .faq-wrapper {
+      background: #e6f4ff;
+      border-radius: 22px;
+      padding: 22px 18px 24px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+    }
+    .faq-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #111827;
+      margin: 0 0 16px;
+      text-align: left;
+    }
+    .faq-title span {
+      margin-right: 4px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 14px 16px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+    .faq-item-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .faq-question {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+      text-align: left;
+    }
+    .faq-toggle {
+      margin-left: auto;
+      font-size: 18px;
+      font-weight: 800;
+      color: #16a34a;
+    }
+    .faq-item-body {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.6;
+      display: none;
+    }
+    .faq-item-body p {
+      margin: 0;
+      text-align: left;
+    }
+    .faq-item.open .faq-item-body {
+      display: block;
+    }
+
+    /* POPUP GLOBAL */
+    .popup-notif {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      z-index: 9999;
+
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      background: #fffceb;
+      border-radius: 18px;
+      padding: 14px 18px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+      border-left: 6px solid #fbbf24;
+
+      width: 310px;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all .4s ease;
+    }
+
+    .popup-notif.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Avatar */
+    .notif-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg,#60a5fa,#2563eb);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    /* Info */
+    .notif-name {
+      font-weight: 700;
+      color: #111;
+      font-size: 15px;
+    }
+    .notif-city {
+      color: #444;
+    }
+
+    .notif-job {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: -2px;
+    }
+
+    .notif-text {
+      color: #059669;
+      font-weight: 700;
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    .notif-time {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 2px;
+    }
   </style>
 </head>
 <body>
@@ -1190,89 +1327,80 @@
       </div>
     </section>
 
-    <!-- JUDUL + PANAH -->
-    <div class="arrow-title-wrap">
-      <h2 class="arrow-title">
-        Rahasia <span>Bisnis Laundry</span> yang Akan Anda Kuasai
-      </h2>
-      <div class="down-arrows">
-        <span class="arrow-side">⬇️</span>
-        <span class="arrow-center">⬇️</span>
-        <span class="arrow-side">⬇️</span>
-      </div>
-    </div>
-
     <!-- SECTION RAHASIA BISNIS - SLIDER -->
     <section class="secrets-section">
-      <h2 class="secrets-heading">
-        Di Dalam E-book Ini, Anda Akan <span>Pelajari Semua Rahasia:</span>
-      </h2>
-      <p class="secrets-subtitle">
-        Langkah demi langkah yang dirancang khusus untuk pemula, bahkan yang belum pernah berbisnis sekalipun.
-      </p>
+      <!-- JUDUL + PANAH -->
+      <div class="arrow-title-wrap">
+        <h2 class="arrow-title">
+          Rahasia <span>Bisnis Laundry</span> yang Akan Anda Kuasai
+        </h2>
+        <p class="secrets-subtitle">
+          Langkah demi langkah yang dirancang khusus untuk pemula, bahkan yang belum pernah berbisnis sekalipun.
+        </p>
 
-      <div class="secrets-scroll-wrapper">
-        <div class="secrets-row">
+        <div class="secrets-scroll-wrapper">
+          <div class="secrets-row">
 
-          <div class="secret-card">
-            <div class="secret-icon">📊</div>
-            <h3 class="secret-title">Rencana Modal yang Aman</h3>
-            <p class="secret-desc">
-              Cara menyusun anggaran mesin, deterjen, dan kebutuhan awal agar modal lebih terkontrol.
-            </p>
+            <div class="secret-card">
+              <div class="secret-icon">📊</div>
+              <h3 class="secret-title">Rencana Modal yang Aman</h3>
+              <p class="secret-desc">
+                Cara menyusun anggaran mesin, deterjen, dan kebutuhan awal agar modal lebih terkontrol.
+              </p>
+            </div>
+
+            <div class="secret-card">
+              <div class="secret-icon">📍</div>
+              <h3 class="secret-title">Jangkauan & Lokasi Menguntungkan</h3>
+              <p class="secret-desc">
+                Menentukan area layanan dan sistem antar–jemput yang paling potensial di sekitar rumah Anda.
+              </p>
+            </div>
+
+            <div class="secret-card">
+              <div class="secret-icon">🧼</div>
+              <h3 class="secret-title">Teknik Cuci & Perawatan Kain</h3>
+              <p class="secret-desc">
+                Tips praktis agar cucian bersih, wangi, dan tidak merusak jenis kain pelanggan.
+              </p>
+            </div>
+
+            <div class="secret-card">
+              <div class="secret-icon">💰</div>
+              <h3 class="secret-title">Harga Jasa yang Sehat</h3>
+              <p class="secret-desc">
+                Rumus menentukan harga per kilo yang masuk akal, tetap kompetitif dan tetap untung.
+              </p>
+            </div>
+
+            <div class="secret-card">
+              <div class="secret-icon">🎯</div>
+              <h3 class="secret-title">Pelanggan Pertama & Repeat Order</h3>
+              <p class="secret-desc">
+                Strategi simpel agar laundry cepat dikenal dan pelanggan senang kembali berkali-kali.
+              </p>
+            </div>
+
+            <div class="secret-card">
+              <div class="secret-icon">⚙️</div>
+              <h3 class="secret-title">SOP Operasional yang Rapi</h3>
+              <p class="secret-desc">
+                Alur kerja harian yang jelas supaya Anda tidak kewalahan saat order mulai ramai.
+              </p>
+            </div>
+
           </div>
-
-          <div class="secret-card">
-            <div class="secret-icon">📍</div>
-            <h3 class="secret-title">Jangkauan & Lokasi Menguntungkan</h3>
-            <p class="secret-desc">
-              Menentukan area layanan dan sistem antar–jemput yang paling potensial di sekitar rumah Anda.
-            </p>
-          </div>
-
-          <div class="secret-card">
-            <div class="secret-icon">🧼</div>
-            <h3 class="secret-title">Teknik Cuci & Perawatan Kain</h3>
-            <p class="secret-desc">
-              Tips praktis agar cucian bersih, wangi, dan tidak merusak jenis kain pelanggan.
-            </p>
-          </div>
-
-          <div class="secret-card">
-            <div class="secret-icon">💰</div>
-            <h3 class="secret-title">Harga Jasa yang Sehat</h3>
-            <p class="secret-desc">
-              Rumus menentukan harga per kilo yang masuk akal, tetap kompetitif dan tetap untung.
-            </p>
-          </div>
-
-          <div class="secret-card">
-            <div class="secret-icon">🎯</div>
-            <h3 class="secret-title">Pelanggan Pertama & Repeat Order</h3>
-            <p class="secret-desc">
-              Strategi simpel agar laundry cepat dikenal dan pelanggan senang kembali berkali-kali.
-            </p>
-          </div>
-
-          <div class="secret-card">
-            <div class="secret-icon">⚙️</div>
-            <h3 class="secret-title">SOP Operasional yang Rapi</h3>
-            <p class="secret-desc">
-              Alur kerja harian yang jelas supaya Anda tidak kewalahan saat order mulai ramai.
-            </p>
-          </div>
-
         </div>
+        <p style="
+          text-align:center;
+          font-size:14px;
+          color:#6b7280;
+          font-style:italic;
+          margin-top:16px;
+        ">
+          “Mulai profit lebih cepat dengan panduan praktis ini.”
+        </p>
       </div>
-      <p style="
-        text-align:center;
-        font-size:14px;
-        color:#6b7280;
-        font-style:italic;
-        margin-top:16px;
-      ">
-        “Mulai profit lebih cepat dengan panduan praktis ini.”
-      </p>
     </section>
 
     <!-- CTA PENUTUP -->
@@ -1287,96 +1415,80 @@
       </a>
     </div>
 
-    <!-- SECTION JUDUL TESTIMONI + ICON PANAH -->
-    <div class="testimonial-title-wrap">
-      <h2 class="testimonial-heading">
-        Masih Ragu Memulai <span>Bisnis Laundry?</span>
-      </h2>
-
-      <p class="testimonial-sub">
-        Tenang, banyak pemula merasakan hal yang sama.<br>
-        Berikut pengalaman nyata dari mereka yang sudah mencoba panduan ini…
-      </p>
-
-      <div class="down-arrows"> 
-        <span class="arrow-side">⬇️</span>
-        <span class="arrow-center">⬇️</span>
-        <span class="arrow-side">⬇️</span>
-      </div>
-    </div>
-
     <!-- SECTION TESTIMONI -->
     <section class="testimonial-section">
-      <h2 class="testimonial-heading-main">
-        Mereka Sudah Memulai, Kini Giliran Anda
-      </h2>
-      <p class="testimonial-sub-main">
-        Simak pengalaman nyata para pemula yang memulai bisnis laundry
-        dengan bantuan panduan ini.
-      </p>
+      <div class="testimonial-title-wrap">
+        <h2 class="testimonial-heading">
+          Masih Ragu Memulai <span>Bisnis Laundry?</span>
+        </h2>
+        <p class="testimonial-sub-main">
+          Simak pengalaman nyata para pemula yang memulai bisnis laundry
+          dengan bantuan panduan ini.
+        </p>
 
-      <div class="testimonial-slider">
+        <div class="testimonial-slider">
 
-        <article class="testimonial-card active" data-index="0">
-          <div class="testimonial-inner">
-            <div class="testimonial-header">
-              <div class="avatar-circle avatar-1">L</div>
-              <div>
-                <div class="testimonial-name">Laila, 27 tahun</div>
-                <div class="testimonial-meta">Buka 2 bulan lalu | Bandung</div>
+          <article class="testimonial-card active" data-index="0">
+            <div class="testimonial-inner">
+              <div class="testimonial-header">
+                <div class="avatar-circle avatar-1">L</div>
+                <div>
+                  <div class="testimonial-name">Laila, 27 tahun</div>
+                  <div class="testimonial-meta">Buka 2 bulan lalu | Bandung</div>
+                </div>
               </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Saya ibu rumah tangga yang awalnya bingung mulai dari mana.
+                Panduan ini bantu saya hitung modal dan atur paket layanan.
+                Sekarang hampir tiap hari ada cucian masuk dari tetangga."
+              </p>
             </div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "Saya ibu rumah tangga yang awalnya bingung mulai dari mana.
-              Panduan ini bantu saya hitung modal dan atur paket layanan.
-              Sekarang hampir tiap hari ada cucian masuk dari tetangga."
-            </p>
-          </div>
-        </article>
+          </article>
 
-        <article class="testimonial-card" data-index="1">
-          <div class="testimonial-inner">
-            <div class="testimonial-header">
-              <div class="avatar-circle avatar-2">F</div>
-              <div>
-                <div class="testimonial-name">Fajar, 34 tahun</div>
-                <div class="testimonial-meta">Buka 5 bulan lalu | Depok</div>
+          <article class="testimonial-card" data-index="1">
+            <div class="testimonial-inner">
+              <div class="testimonial-header">
+                <div class="avatar-circle avatar-2">F</div>
+                <div>
+                  <div class="testimonial-name">Fajar, 34 tahun</div>
+                  <div class="testimonial-meta">Buka 5 bulan lalu | Depok</div>
+                </div>
               </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Modal saya terbatas, jadi takut salah beli peralatan.
+                Dari e-book ini saya tahu prioritas peralatan dan cara atur harga.
+                Dalam 3 bulan, modal sudah kembali dan sekarang fokus nambah pelanggan."
+              </p>
             </div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "Modal saya terbatas, jadi takut salah beli peralatan.
-              Dari e-book ini saya tahu prioritas peralatan dan cara atur harga.
-              Dalam 3 bulan, modal sudah kembali dan sekarang fokus nambah pelanggan."
-            </p>
-          </div>
-        </article>
+          </article>
 
-        <article class="testimonial-card" data-index="2">
-          <div class="testimonial-inner">
-            <div class="testimonial-header">
-              <div class="avatar-circle avatar-3">S</div>
-              <div>
-                <div class="testimonial-name">Sinta, 30 tahun</div>
-                <div class="testimonial-meta">Usaha sampingan | Bekasi</div>
+          <article class="testimonial-card" data-index="2">
+            <div class="testimonial-inner">
+              <div class="testimonial-header">
+                <div class="avatar-circle avatar-3">S</div>
+                <div>
+                  <div class="testimonial-name">Sinta, 30 tahun</div>
+                  <div class="testimonial-meta">Usaha sampingan | Bekasi</div>
+                </div>
               </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Saya masih kerja kantoran, jadi butuh sistem yang rapi.
+                Bagian SOP dan manajemen waktu di panduan ini sangat membantu.
+                Order bisa jalan, tapi saya tetap punya waktu untuk pekerjaan utama."
+              </p>
             </div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "Saya masih kerja kantoran, jadi butuh sistem yang rapi.
-              Bagian SOP dan manajemen waktu di panduan ini sangat membantu.
-              Order bisa jalan, tapi saya tetap punya waktu untuk pekerjaan utama."
-            </p>
-          </div>
-        </article>
+          </article>
 
-      </div>
+        </div>
 
-      <div class="testimonial-dots">
-        <button class="testimonial-dot active" data-index="0"></button>
-        <button class="testimonial-dot" data-index="1"></button>
-        <button class="testimonial-dot" data-index="2"></button>
+        <div class="testimonial-dots">
+          <button class="testimonial-dot active" data-index="0"></button>
+          <button class="testimonial-dot" data-index="1"></button>
+          <button class="testimonial-dot" data-index="2"></button>
+        </div>
       </div>
     </section>
 
@@ -1513,191 +1625,259 @@
       </div>
     </section>
 
-    <!-- FORM CHECKOUT & METODE PEMBAYARAN -->
-    <section class="checkout-section" id="checkout">
-      <h2 class="checkout-title">Lengkapi Data & Pilih Metode Pembayaran</h2>
-      <p class="checkout-subtitle">
-        Isi data di bawah, lalu pilih cara bayar yang paling nyaman untuk Anda.
-      </p>
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+      <div class="faq-wrapper">
+        <h2 class="faq-title">
+          <span>❓</span>FAQ Bisnis Laundry
+        </h2>
 
-      <div class="checkout-arrows">
-        <span>⬇</span>
-        <span>⬇</span>
-        <span>⬇</span>
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item open">
+            <div class="faq-item-header">
+              <div class="faq-question">
+                1. Saya masih kerja / punya kesibukan lain, apakah bisa jalanin laundry sebagai usaha sampingan?
+              </div>
+              <div class="faq-toggle">×</div>
+            </div>
+            <div class="faq-item-body">
+              <p>
+                Bisa. Di e-book ini ada contoh alur kerja harian dan pembagian tugas yang cocok untuk pemilik
+                yang tidak full di tempat. Anda bisa mulai skala kecil dulu, lalu menambahkan karyawan
+                atau anggota keluarga ketika order mulai ramai.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <div class="faq-item-header">
+              <div class="faq-question">
+                2. Saya belum paham hitung-hitungan bisnis. Apakah di panduan ini diajarkan cara menghitung laba rugi?
+              </div>
+              <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-item-body">
+              <p>
+                Ya. Kami sertakan contoh sederhana untuk menghitung biaya listrik, air, deterjen, gaji,
+                hingga target omzet. Semua dijelaskan dengan bahasa awam, sehingga Anda yang tidak punya
+                background akuntansi pun bisa mengikuti dan tahu posisi untung–rugi usaha.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <div class="faq-item-header">
+              <div class="faq-question">
+                3. Bagaimana kalau saya tinggal di lingkungan yang sudah banyak laundry, masih ada peluang?
+              </div>
+              <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-item-body">
+              <p>
+                Masih. Di e-book dibahas cara mencari keunikan layanan (misalnya layanan ekspres, cuci khusus
+                selimut, atau jemput–antar) dan cara menentukan segmen pelanggan yang belum tersentuh
+                kompetitor sehingga Anda tidak perang harga semata.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <div class="faq-item-header">
+              <div class="faq-question">
+                4. Rumah saya tidak terlalu luas, apakah tetap bisa memulai dari rumah?
+              </div>
+              <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-item-body">
+              <p>
+                Bisa. Panduan ini fokus pada konsep <strong>laundry rumahan</strong>, sehingga ada tips khusus
+                menata ruang sempit, menempatkan mesin, area jemur, dan ruang setrika agar tetap rapi
+                dan tidak mengganggu aktivitas keluarga di rumah.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <div class="faq-item-header">
+              <div class="faq-question">
+                5. File e-book-nya dalam bentuk apa? Apakah bisa dibaca lewat HP?
+              </div>
+              <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-item-body">
+              <p>
+                E-book dikirim dalam format <strong>PDF</strong> sehingga bisa dibaca melalui HP, tablet,
+                maupun laptop. Anda bisa menyimpannya di WhatsApp, Google Drive, atau memori perangkat,
+                dan membacanya kapan saja tanpa harus selalu online.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <div class="faq-item-header">
+              <div class="faq-question">
+                6. Kalau setelah membaca saya masih bingung, apakah ada tempat bertanya?
+              </div>
+              <div class="faq-toggle">+</div>
+            </div>
+            <div class="faq-item-body">
+              <p>
+                Setelah pembelian, Anda akan mendapatkan kontak WhatsApp admin.
+                Anda bisa menghubungi admin jika ada bagian yang kurang jelas,
+                misalnya terkait perhitungan modal atau penyusunan paket layanan laundry.
+              </p>
+            </div>
+          </div>
+
+          <!-- POPUP NOTIF -->
+          <div id="notifBox" class="popup-notif">
+            <div class="notif-avatar" id="notifAvatar">R</div>
+            <div>
+              <div class="notif-name">
+                <span id="notifName">Rani</span> · <span id="notifCity">Depok</span>
+              </div>
+              <div class="notif-job" id="notifJob">Karyawan Swasta</div>
+              <div class="notif-text" id="notifText">
+                ✅ Baru download e-book & bonus lengkap!
+              </div>
+              <div class="notif-time" id="notifTime">1 menit yang lalu</div>
+            </div>
+          </div>
+
+        </div>
       </div>
-
-      <form class="checkout-form">
-        <div class="checkout-grid">
-          <div class="form-group">
-            <label for="nama">Nama Lengkap</label>
-            <input id="nama" type="text" class="form-input" placeholder="Nama Lengkap">
-          </div>
-
-          <div class="form-group">
-            <label for="wa">Nomor WhatsApp</label>
-            <div class="phone-row">
-              <span class="phone-prefix">ID +62</span>
-              <input id="wa" type="tel" class="phone-input" placeholder="812345678">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="kecamatan">Kecamatan</label>
-            <select id="kecamatan" class="form-select">
-              <option value="">Pilih kecamatan</option>
-              <option>Contoh Kecamatan 1</option>
-              <option>Contoh Kecamatan 2</option>
-              <option>Contoh Kecamatan 3</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="alamat">Alamat Lengkap</label>
-            <textarea id="alamat" class="form-textarea" placeholder="Tulis alamat lengkap Anda"></textarea>
-          </div>
-        </div>
-
-        <h3 class="checkout-subheading">Metode Pembayaran:</h3>
-
-        <div class="payment-list">
-          <label class="payment-option">
-            <input type="radio" name="payment" checked />
-            <div>
-              <div class="payment-main">
-                <div class="pay-icon pay-dana">Da</div>
-                <div>
-                  <div class="payment-text-title">Dana</div>
-                  <div class="payment-text-desc">
-                    Bayar instan lewat saldo Dana Anda.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-
-          <label class="payment-option">
-            <input type="radio" name="payment" />
-            <div>
-              <div class="payment-main">
-                <div class="pay-icon pay-gopay">Go</div>
-                <div>
-                  <div class="payment-text-title">GoPay</div>
-                  <div class="payment-text-desc">
-                    Praktis langsung dari aplikasi Gojek.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-
-          <label class="payment-option">
-            <input type="radio" name="payment" />
-            <div>
-              <div class="payment-main">
-                <div class="pay-icon pay-va">VA</div>
-                <div>
-                  <div class="payment-text-title">Virtual Account / GoPay / DANA</div>
-                  <div class="payment-text-desc">
-                    Nomor VA otomatis, bisa dibayar dari berbagai bank & e-wallet.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-
-          <label class="payment-option">
-            <input type="radio" name="payment" />
-            <div>
-              <div class="payment-main">
-                <div class="pay-icon pay-qris">QR</div>
-                <div>
-                  <div class="payment-text-title">QRIS</div>
-                  <div class="payment-text-desc">
-                    Scan satu kode QR, bisa dibayar dari hampir semua aplikasi keuangan.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-
-          <label class="payment-option">
-            <input type="radio" name="payment" />
-            <div>
-              <div class="payment-main">
-                <div class="pay-icon pay-shopee">Sp</div>
-                <div>
-                  <div class="payment-text-title">ShopeePay</div>
-                  <div class="payment-text-desc">
-                    Cocok untuk pengguna aktif Shopee & ShopeePay.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-
-          <label class="payment-option">
-            <input type="radio" name="payment" />
-            <div>
-              <div class="payment-main">
-                <div class="pay-icon pay-bri">BRI</div>
-                <div>
-                  <div class="payment-text-title">BRI Virtual Account</div>
-                  <div class="payment-text-desc">
-                    Transfer melalui ATM, m-banking, atau internet banking BRI.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-
-          <label class="payment-option">
-            <input type="radio" name="payment" />
-            <div>
-              <div class="payment-main">
-                <div class="pay-icon pay-mandiri">Mn</div>
-                <div>
-                  <div class="payment-text-title">Bank Mandiri Virtual Account</div>
-                  <div class="payment-text-desc">
-                    Transfer dari Mandiri atau bank lain melalui menu VA.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </label>
-        </div>
-
-        <!-- TOMBOL ORDER SEKARANG DI DALAM CHECKOUT -->
-        <div class="final-order-btn-wrap">
-          <button type="submit" class="final-order-btn">
-            ORDER SEKARANG
-          </button>
-        </div>
-
-      </form>
     </section>
-  </main>
-  
 
-  <!-- JS slider testimoni -->
+  </main>
+
+  <!-- JS slider testimoni + FAQ -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      /* === SLIDER TESTIMONI === */
       const dots  = document.querySelectorAll('.testimonial-dot');
       const cards = document.querySelectorAll('.testimonial-card');
 
-      if (!dots.length || !cards.length) return;
+      if (dots.length && cards.length) {
+        dots.forEach(function (dot) {
+          dot.addEventListener('click', function () {
+            const index = this.getAttribute('data-index');
 
-      dots.forEach(function (dot) {
-        dot.addEventListener('click', function () {
-          const index = this.getAttribute('data-index');
+            dots.forEach(d => d.classList.remove('active'));
+            cards.forEach(c => c.classList.remove('active'));
 
-          dots.forEach(d => d.classList.remove('active'));
-          cards.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            cards[index].classList.add('active');
+          });
+        });
+      }
 
-          this.classList.add('active');
-          cards[index].classList.add('active');
+      /* === FAQ ACCORDION === */
+      const faqItems   = document.querySelectorAll('.faq-item');
+      const faqHeaders = document.querySelectorAll('.faq-item-header');
+
+      // set icon awal
+      faqItems.forEach(item => {
+        const toggle = item.querySelector('.faq-toggle');
+        if (!toggle) return;
+        if (item.classList.contains('open')) {
+          toggle.textContent = '×';
+        } else {
+          toggle.textContent = '+';
+        }
+      });
+
+      faqHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+          const item = this.parentElement;
+          const isOpen = item.classList.contains('open');
+
+          // tutup semua dulu
+          faqItems.forEach(i => {
+            i.classList.remove('open');
+            const t = i.querySelector('.faq-toggle');
+            if (t) t.textContent = '+';
+          });
+
+          // kalau sebelumnya belum terbuka, buka item ini
+          if (!isOpen) {
+            item.classList.add('open');
+            const t = item.querySelector('.faq-toggle');
+            if (t) t.textContent = '×';
+          }
         });
       });
     });
+
+    const notifBox = document.getElementById("notifBox");
+    const nameEl = document.getElementById("notifName");
+    const cityEl = document.getElementById("notifCity");
+    const jobEl = document.getElementById("notifJob");
+    const textEl = document.getElementById("notifText");
+    const timeEl = document.getElementById("notifTime");
+    const avatarEl = document.getElementById("notifAvatar");
+
+    // DATA — bebas kamu tambah
+    const data = [
+      {
+        name: "Ibu Siti",
+        city: "Bandung",
+        job: "Ibu Rumah Tangga",
+        text: "Baru download e-book & bonus lengkap!",
+        time: "10 menit yang lalu"
+      },
+      {
+        name: "Rani",
+        city: "Depok",
+        job: "Karyawan Swasta",
+        text: "Berhasil beli paket lengkap laundry!",
+        time: "5 menit yang lalu"
+      },
+      {
+        name: "Fajar",
+        city: "Bogor",
+        job: "Mahasiswa",
+        text: "Baru download e-book panduan laundry!",
+        time: "2 menit yang lalu"
+      },
+      {
+        name: "Dewi",
+        city: "Tangerang",
+        job: "Ibu Rumah Tangga",
+        text: "Baru mengambil paket promo hari ini!",
+        time: "7 menit yang lalu"
+      }
+    ];
+
+    let indexNotif = 0;
+
+    function showNotif() {
+      const d = data[indexNotif];
+
+      nameEl.textContent = d.name;
+      cityEl.textContent = d.city;
+      jobEl.textContent = d.job;
+      textEl.textContent = "✅ " + d.text;
+      timeEl.textContent = d.time;
+
+      avatarEl.textContent = d.name.charAt(0);
+
+      notifBox.classList.add("show");
+
+      setTimeout(() => {
+        notifBox.classList.remove("show");
+      }, 4000);
+
+      indexNotif = (indexNotif + 1) % data.length;
+    }
+
+    showNotif();
+    setInterval(showNotif, 9000);
   </script>
 </body>
 </html>
