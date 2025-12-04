@@ -1,475 +1,455 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <title>Bangun Bisnis Laundry Rumahan yang Cepat Balik Modal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f5f7fb;
-      color: #222;
-    }
-    .lp-wrapper {
-      max-width: 640px;
-      margin: 40px auto;
-      padding: 32px 24px 40px;
-      background: linear-gradient(180deg, #e9ffe9 0%, #f6fff6 100%);
-      border-radius: 16px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
-    }
-    .badge {
-      display: block;
-      width: fit-content;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: #14a36d;
-      background: #ffffff;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin: 0 auto 16px;
-    }
-
-    h1 {
-      font-size: 26px;
-      line-height: 1.3;
-      margin: 8px 0 16px;
-      color: #111827;
-      text-align: center;
-    }
-    h1 .highlight {
-      color: #10b981;
-    }
-    .sub-headline {
-      font-size: 14px;
-      color: #4b5563;
-      margin-bottom: 8px;
-      text-align: center;
-    }
-    p {
-      font-size: 14px;
-      line-height: 1.7;
-      color: #374151;
-      margin: 0 0 12px;
-      text-align: center;
-    }
-    .section-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin: 28px 0 8px;
-      color: #111827;
-      text-align: left;
-    }
-    ul {
-      padding-left: 20px;
-      margin: 0 0 12px;
-    }
-    li {
-      font-size: 14px;
-      line-height: 1.7;
-      margin-bottom: 4px;
-    }
-
-    /* Kartu e-book + CTA */
-    .product-section {
-      margin-top: 24px;
-      text-align: center;
-    }
-    .product-card-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .product-card-outer {
-      background: #ffffff;
-      padding: 16px;
-      border-radius: 22px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-      display: inline-block;
-    }
-    .product-card-inner {
-      width: 260px;
-      height: 360px;
-      border-radius: 18px;
-      background: #06b16a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #ffffff;
-      padding: 16px;
-    }
-    .product-card-inner span {
-      display: block;
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    .product-card-inner strong {
-      display: block;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-    .product-card-inner small {
-      display: block;
-      margin-top: 6px;
-      font-size: 12px;
-      opacity: 0.9;
-    }
-
-    .cta-banner {
-      margin: 0 auto;
-      margin-top: 4px;
-      padding: 14px 18px;
-      max-width: 360px;
-      border-radius: 18px;
-      background: #e0fff1;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-    .cta-banner-icon {
-      width: 20px;
-      height: 20px;
-      border-radius: 999px;
-      border: 2px solid #16a34a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #16a34a;
-      flex-shrink: 0;
-    }
-    .cta-banner a {
-      font-size: 14px;
-      font-weight: 700;
-      color: #2563eb;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-    .cta-banner a:hover {
-      text-decoration: underline;
-    }
-    .note-under-cta {
-      font-size: 12px;
-      color: #6b7280;
-      margin-top: 10px;
-      font-style: italic;
-      text-align: center;
-    }
-
-    .cta-box {
-      margin-top: 32px;
-      padding: 18px 16px;
-      background: #ffffff;
-      border-radius: 14px;
-      border: 1px solid #d1fae5;
-      text-align: center;
-    }
-    .cta-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #059669;
-    }
-    .cta-btn {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 12px 20px;
-      border-radius: 999px;
-      background: #10b981;
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 14px;
-      text-decoration: none;
-      box-shadow: 0 12px 25px rgba(16, 185, 129, 0.35);
-    }
-    .cta-btn:hover {
-      opacity: 0.92;
-    }
-
-    /* ====== SECTION KESALAHAN FATAL ====== */
-    .fatal-section {
-      margin-top: 36px;
-      padding: 22px 20px 24px;
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
-    }
-    .fatal-heading {
-      text-align: center;
-      margin-bottom: 6px;
-      font-size: 20px;
-      font-weight: 800;
-      color: #111827;
-    }
-    .fatal-emoji {
-      margin-left: 4px;
-    }
-    .fatal-subtitle {
-      text-align: center;
-      font-size: 13px;
-      color: #6b7280;
-      margin-bottom: 18px;
-    }
-    .fatal-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .fatal-card {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 12px 14px;
-      border-radius: 18px;
-      background: #fff8e6;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
-    }
-    .fatal-card:nth-child(2) { background: #ecf5ff; }
-    .fatal-card:nth-child(3) { background: #e9fff2; }
-    .fatal-card:nth-child(4) { background: #fef2ff; }
-    .fatal-card:nth-child(5) { background: #ffeef2; }
-
-    .fatal-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-    .fatal-text-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #111827;
-      margin: 0 0 4px;
-      text-align: left;
-    }
-    .fatal-text-desc {
-      font-size: 13px;
-      color: #4b5563;
-      margin: 0;
-      text-align: left;
-    }
-
-    /* ====== SECTION RAHASIA BISNIS (judul + panah) ====== */
-    .arrow-title-wrap {
-      text-align: center;
-      margin: 32px 0 20px;
-    }
-    .arrow-title {
-      font-size: 22px;
-      font-weight: 800;
-      color: #111827;
-      margin: 0 0 8px;
-    }
-    .arrow-title span {
-      color: #10b981;
-    }
-
-    /* ====== SECTION RAHASIA BISNIS (SLIDER) ====== */
-    .secrets-section {
-      margin-top: 0;
-      padding: 28px 20px 30px;
-      border-radius: 18px;
-      background: #e9ffe9;
-    }
-
-    .secrets-heading {
-      font-size: 20px;
-      font-weight: 800;
-      color: #111827;
-      text-align: center;
-      margin: 0 0 6px;
-    }
-    .secrets-heading span {
-      color: #10b981;
-    }
-
-    .secrets-subtitle {
-      font-size: 13px;
-      color: #6b7280;
-      text-align: center;
-      margin: 0 0 20px;
-    }
-
-    .secrets-scroll-wrapper {
-      overflow-x: auto;
-      padding: 4px 8px 14px;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-    .secrets-scroll-wrapper::-webkit-scrollbar {
-      height: 6px;
-    }
-    .secrets-scroll-wrapper::-webkit-scrollbar-track {
-      background: #e5e7eb;
-      border-radius: 999px;
-    }
-    .secrets-scroll-wrapper::-webkit-scrollbar-thumb {
-      background: #9ca3af;
-      border-radius: 999px;
-    }
-
-    .secrets-row {
-      display: inline-flex;
-      gap: 18px;
-      min-width: 100%;
-    }
-
-    .secret-card {
-      flex: 0 0 260px;
-      background: #ffffff;
-      border-radius: 24px;
-      padding: 22px 20px 20px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 10px;
-      scroll-snap-align: start;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .secret-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.16);
-    }
-
-    .secret-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 18px;
-      background: #f3faf7;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      color: #059669;
-    }
-    .secret-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: #111827;
-      margin: 4px 0 2px;
-    }
-    .secret-desc {
-      font-size: 13px;
-      color: #4b5563;
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    /* ===== JUDUL SECTION TESTIMONI ===== */
-    .testimonial-title-wrap {
-      text-align: center;
-      margin: 40px 0 28px;
-    }
-
-    .testimonial-heading {
-      font-size: 24px;
-      font-weight: 800;
-      color: #111827;
-      margin-bottom: 8px;
-    }
-
-    .testimonial-heading span {
-      color: #10b981;
-    }
-
-    .testimonial-sub {
-      font-size: 14px;
-      color: #4b5563;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .down-arrows {
-      margin-top: 14px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .down-arrows span {
-      font-size: 26px;
-      display: inline-block;
-      animation: arrowBounce 1.8s infinite ease-in-out;
-    }
-
-    .down-arrows .arrow-side {
-      opacity: 0.35;
-    }
-
-    .down-arrows .arrow-center {
-      opacity: 1;
-      animation-delay: 0.15s;
-    }
-
-    @keyframes arrowBounce {
-      0%   { transform: translateY(0);     opacity: 0.3; }
-      50%  { transform: translateY(8px);   opacity: 1;   }
-      100% { transform: translateY(0);     opacity: 0.3; }
-    }
-
-    @media (max-width: 640px) {
-      .secret-card {
-        flex: 0 0 230px;
-        padding: 20px 16px 18px;
+  <!DOCTYPE html>
+  <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bangun Bisnis Laundry Rumahan yang Cepat Balik Modal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f5f7fb;
+        color: #222;
+      }
+      .lp-wrapper {
+        max-width: 640px;
+        margin: 40px auto;
+        padding: 32px 24px 40px;
+        background: linear-gradient(180deg, #e9ffe9 0%, #f6fff6 100%);
+        border-radius: 16px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+      }
+      .badge {
+        display: block;
+        width: fit-content;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #14a36d;
+        background: #ffffff;
+        padding: 6px 14px;
+        border-radius: 999px;
+        margin: 0 auto 16px;
       }
 
+      h1 {
+        font-size: 26px;
+        line-height: 1.3;
+        margin: 8px 0 16px;
+        color: #111827;
+        text-align: center;
+      }
+      h1 .highlight {
+        color: #10b981;
+      }
+      .sub-headline {
+        font-size: 14px;
+        color: #4b5563;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.7;
+        color: #374151;
+        margin: 0 0 12px;
+        text-align: center;
+      }
+
+      /* Kartu e-book + CTA */
+      .product-section {
+        margin-top: 24px;
+        text-align: center;
+      }
+      .product-card-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .product-card-outer {
+        background: #ffffff;
+        padding: 16px;
+        border-radius: 22px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        display: inline-block;
+      }
+      .product-card-inner {
+        width: 260px;
+        height: 360px;
+        border-radius: 18px;
+        background: #06b16a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #ffffff;
+        padding: 16px;
+      }
+      .product-card-inner span {
+        display: block;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .product-card-inner strong {
+        display: block;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .product-card-inner small {
+        display: block;
+        margin-top: 6px;
+        font-size: 12px;
+        opacity: 0.9;
+      }
+
+      .cta-banner {
+        margin: 0 auto;
+        margin-top: 4px;
+        padding: 14px 18px;
+        max-width: 360px;
+        border-radius: 18px;
+        background: #e0fff1;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .cta-banner-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 999px;
+        border: 2px solid #16a34a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #16a34a;
+        flex-shrink: 0;
+      }
+      .cta-banner a {
+        font-size: 14px;
+        font-weight: 700;
+        color: #2563eb;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .cta-banner a:hover {
+        text-decoration: underline;
+      }
+      .note-under-cta {
+        font-size: 12px;
+        color: #6b7280;
+        margin-top: 10px;
+        font-style: italic;
+        text-align: center;
+      }
+
+      .cta-box {
+        margin-top: 32px;
+        padding: 18px 16px;
+        background: #ffffff;
+        border-radius: 14px;
+        border: 1px solid #d1fae5;
+        text-align: center;
+      }
+      .cta-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: #059669;
+      }
+      .cta-btn {
+        display: inline-block;
+        margin-top: 14px;
+        padding: 12px 20px;
+        border-radius: 999px;
+        background: #10b981;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 14px;
+        text-decoration: none;
+        box-shadow: 0 12px 25px rgba(16, 185, 129, 0.35);
+        cursor: default;
+      }
+      .cta-btn:hover {
+        opacity: 0.92;
+      }
+
+      /* ====== SECTION KESALAHAN FATAL ====== */
+      .fatal-section {
+        margin-top: 36px;
+        padding: 22px 20px 24px;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+      }
+      .fatal-heading {
+        text-align: center;
+        margin-bottom: 6px;
+        font-size: 20px;
+        font-weight: 800;
+        color: #111827;
+      }
+      .fatal-emoji {
+        margin-left: 4px;
+      }
+      .fatal-subtitle {
+        text-align: center;
+        font-size: 13px;
+        color: #6b7280;
+        margin-bottom: 18px;
+      }
+      .fatal-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .fatal-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 14px;
+        border-radius: 18px;
+        background: #fff8e6;
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+      }
+      .fatal-card:nth-child(2) { background: #ecf5ff; }
+      .fatal-card:nth-child(3) { background: #e9fff2; }
+      .fatal-card:nth-child(4) { background: #fef2ff; }
+      .fatal-card:nth-child(5) { background: #ffeef2; }
+      .fatal-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .fatal-text-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #111827;
+        margin: 0 0 4px;
+        text-align: left;
+      }
+      .fatal-text-desc {
+        font-size: 13px;
+        color: #4b5563;
+        margin: 0;
+        text-align: left;
+      }
+
+      /* ====== SECTION RAHASIA BISNIS ====== */
+      .arrow-title-wrap {
+        text-align: center;
+        margin: 32px 0 20px;
+      }
+      .arrow-title {
+        font-size: 22px;
+        font-weight: 800;
+        color: #111827;
+        margin: 0 0 8px;
+      }
+      .arrow-title span {
+        color: #10b981;
+      }
+
+      .secrets-section {
+        margin-top: 0;
+        padding: 28px 20px 30px;
+        border-radius: 18px;
+        background: #e9ffe9;
+      }
+      .secrets-subtitle {
+        font-size: 13px;
+        color: #6b7280;
+        text-align: center;
+        margin: 0 0 20px;
+      }
+      .secrets-scroll-wrapper {
+        overflow-x: auto;
+        padding: 4px 8px 14px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+      }
+      .secrets-scroll-wrapper::-webkit-scrollbar {
+        height: 6px;
+      }
+      .secrets-scroll-wrapper::-webkit-scrollbar-track {
+        background: #e5e7eb;
+        border-radius: 999px;
+      }
+      .secrets-scroll-wrapper::-webkit-scrollbar-thumb {
+        background: #9ca3af;
+        border-radius: 999px;
+      }
+      .secrets-row {
+        display: inline-flex;
+        gap: 18px;
+        min-width: 100%;
+      }
+      .secret-card {
+        flex: 0 0 260px;
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 22px 20px 20px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        scroll-snap-align: start;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .secret-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 22px 50px rgba(15, 23, 42, 0.16);
+      }
+      .secret-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 18px;
+        background: #f3faf7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #059669;
+      }
+      .secret-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #111827;
+        margin: 4px 0 2px;
+      }
+      .secret-desc {
+        font-size: 13px;
+        color: #4b5563;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      /* ===== JUDUL SECTION TESTIMONI ===== */
       .testimonial-title-wrap {
         text-align: center;
-        margin: 30px 0 20px;
+        margin: 40px 0 28px;
       }
-
       .testimonial-heading {
         font-size: 24px;
         font-weight: 800;
         color: #111827;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
       }
-
-      .testimonial-sub {
+      .testimonial-heading span {
+        color: #10b981;
+      }
+      .testimonial-sub-main {
         font-size: 14px;
         color: #4b5563;
-        margin-bottom: 14px;
+        text-align: center;
+        margin: 0 0 18px;
         line-height: 1.6;
       }
 
-      .down-arrows {
+      /* ===== TESTIMONI SECTION ===== */
+      .testimonial-section {
+        margin: 24px 0 24px;
+        padding: 24px 18px 26px;
+        border-radius: 20px;
+        background: #e6f4ff;
+      }
+      .testimonial-slider {
+        max-width: 520px;
+        margin: 0 auto;
+      }
+      .testimonial-card {
+        display: none;
+      }
+      .testimonial-card.active {
+        display: block;
+      }
+      .testimonial-inner {
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 18px 20px;
+        box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+      }
+      .testimonial-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 4px;
+      }
+      .testimonial-header-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .avatar-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: #ffffff;
+        font-size: 16px;
+      }
+      .avatar-1 { background: linear-gradient(135deg,#22c55e,#16a34a); }
+      .avatar-2 { background: linear-gradient(135deg,#3b82f6,#2563eb); }
+      .avatar-3 { background: linear-gradient(135deg,#ec4899,#db2777); }
+      .testimonial-name {
+        font-size: 15px;
+        font-weight: 700;
+        color: #111827;
+      }
+      .testimonial-meta {
+        font-size: 12px;
+        color: #6b7280;
+      }
+      .testimonial-stars {
+        margin: 2px 0 0;
+        color: #f59e0b;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: left;
+      }
+      .testimonial-text {
+        font-size: 14px;
+        color: #374151;
+        line-height: 1.55;
+        text-align: left;
         margin-top: 10px;
+      }
+      .testimonial-dots {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 14px;
+        gap: 8px;
+        margin-top: 14px;
       }
-
-      .down-arrows span {
-        font-size: 28px;
-        animation: arrowBounce 1.8s infinite ease-in-out;
-        display: inline-block;
+      .testimonial-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        border: none;
+        background: #d1d5db;
+        padding: 0;
+        cursor: pointer;
+        transition: background 0.2s ease, width 0.2s ease;
       }
-
-      .down-arrows .arrow-side {
-        opacity: 0.35;
-        animation-delay: 0s;
-      }
-
-      .down-arrows .arrow-center {
-        opacity: 1;
-        animation-delay: 0.15s;
+      .testimonial-dot.active {
+        width: 22px;
+        background: #10b981;
       }
 
       @keyframes arrowBounce {
@@ -477,1407 +457,1063 @@
         50%  { transform: translateY(8px);   opacity: 1;   }
         100% { transform: translateY(0);     opacity: 0.3; }
       }
-    }
 
-    /* ===== TESTIMONI SECTION ===== */
-    .testimonial-section {
-      margin: 24px 0 24px;
-      padding: 24px 18px 26px;
-      border-radius: 20px;
-      background: #e6f4ff;
-    }
-    .testimonial-heading-main {
-      font-size: 20px;
-      font-weight: 800;
-      color: #111827;
-      text-align: center;
-      margin: 0 0 6px;
-    }
-    .testimonial-sub-main {
-      font-size: 14px;
-      color: #4b5563;
-      text-align: center;
-      margin: 0 0 18px;
-      line-height: 1.6;
-    }
-    .testimonial-slider {
-      max-width: 520px;
-      margin: 0 auto;
-    }
-    .testimonial-card {
-      display: none;
-    }
-    .testimonial-card.active {
-      display: block;
-    }
-    .testimonial-inner {
-      background: #ffffff;
-      border-radius: 24px;
-      padding: 22px 22px 20px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
-    }
-    .testimonial-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-    .avatar-circle {
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #ffffff;
-      font-size: 18px;
-    }
-    .avatar-1 { background: linear-gradient(135deg,#22c55e,#16a34a); }
-    .avatar-2 { background: linear-gradient(135deg,#3b82f6,#2563eb); }
-    .avatar-3 { background: linear-gradient(135deg,#ec4899,#db2777); }
+      @media (max-width: 640px) {
+        .secret-card {
+          flex: 0 0 230px;
+          padding: 20px 16px 18px;
+        }
+        .testimonial-title-wrap {
+          margin: 30px 0 20px;
+        }
+        .testimonial-heading {
+          font-size: 24px;
+          margin-bottom: 6px;
+        }
+        .testimonial-sub-main {
+          margin-bottom: 14px;
+        }
+      }
 
-    .testimonial-name {
-      font-size: 15px;
-      font-weight: 700;
-      color: #111827;
-    }
-    .testimonial-meta {
-      font-size: 13px;
-      color: #6b7280;
-    }
-    .testimonial-stars {
-      margin: 6px 0 10px;
-      color: #f59e0b;
-      font-size: 15px;
-    }
-    .testimonial-text {
-      font-size: 14px;
-      color: #374151;
-      line-height: 1.7;
-      text-align: left;
-      margin: 0;
-    }
-    .testimonial-dots {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      margin-top: 16px;
-    }
-    .testimonial-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      border: none;
-      background: #d1d5db;
-      padding: 0;
-      cursor: pointer;
-      transition: background 0.2s ease, width 0.2s ease;
-    }
-    .testimonial-dot.active {
-      width: 22px;
-      background: #10b981;
-    }
+      /* ===== JUDUL PILIHAN PAKET ===== */
+      .package-heading-section {
+        text-align: center;
+        margin: 40px 0 16px;
+      }
+      .package-heading {
+        font-size: 24px;
+        font-weight: 800;
+        color: #111827;
+        margin: 0 0 8px;
+      }
+      .package-heading span {
+        color: #10b981;
+      }
+      .package-subtext {
+        font-size: 14px;
+        color: #4b5563;
+        margin: 0;
+        line-height: 1.6;
+      }
 
-    /* ===== JUDUL PILIHAN PAKET ===== */
-    .package-heading-section {
-      text-align: center;
-      margin: 40px 0 16px;
-    }
-
-    .package-heading {
-      font-size: 24px;
-      font-weight: 800;
-      color: #111827;
-      margin: 0 0 8px;
-    }
-
-    .package-heading span {
-      color: #10b981;
-    }
-
-    .package-subtext {
-      font-size: 14px;
-      color: #4b5563;
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    /* ====== KARTU PAKET LENGKAP ====== */
-    .pricing-card {
-      margin-top: 20px;
-      background: #ecfff2;
-      border-radius: 22px;
-      border: 2px solid #22c55e;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
-      padding: 26px 20px 24px;
-      position: relative;
-    }
-    .pricing-badge {
-      position: absolute;
-      top: -18px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #fbbf24;
-      color: #ffffff;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      padding: 6px 18px;
-      border-radius: 999px;
-      box-shadow: 0 10px 24px rgba(245, 158, 11, 0.35);
-      text-transform: uppercase;
-      text-align: center;
-    }
-    .pricing-card-inner {
-      margin-top: 12px;
-    }
-    .pricing-card-title {
-      text-align: center;
-      font-size: 18px;
-      font-weight: 800;
-      margin: 8px 0 4px;
-    }
-    .pricing-card-total {
-      text-align: center;
-      font-size: 15px;
-      margin: 0 0 18px;
-    }
-    .pricing-card-total strong {
-      font-weight: 800;
-    }
-    .price-box {
-      margin: 0 auto 18px;
-      max-width: 360px;
-      background: #ffffff;
-      border-radius: 18px;
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
-      padding: 14px 16px 16px;
-      text-align: center;
-    }
-    .price-normal {
-      font-size: 13px;
-      color: #9ca3af;
-      text-decoration: line-through;
-      margin-bottom: 6px;
-    }
-    .price-main {
-      font-size: 32px;
-      font-weight: 900;
-      color: #16a34a;
-      margin: 0 0 4px;
-    }
-    .price-note {
-      font-size: 12px;
-      color: #4b5563;
-      margin: 0;
-    }
-    .pricing-content {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #111827;
-    }
-    .pricing-content-title {
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .pricing-list {
-      list-style: none;
-      padding: 0;
-      margin: 8px 0 0;
-    }
-    .pricing-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      margin-bottom: 8px;
-      font-size: 13px;
-      line-height: 1.6;
-      color: #374151;
-    }
-    .pricing-list li .check-icon {
-      font-size: 20px;
-      line-height: 1;
-      margin-top: 1px;
-      flex-shrink: 0;
-    }
-    .pricing-list li strong {
-      font-weight: 700;
-    }
-    .pricing-guarantee {
-      margin-top: 14px;
-      font-size: 13px;
-      color: #047857;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .pricing-guarantee-icon {
-      font-size: 18px;
-    }
-    .pricing-cta-box {
-      margin-top: 20px;
-      background: #dcfce7;
-      border-radius: 18px;
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      box-shadow: 0 12px 30px rgba(16, 185, 129, 0.3);
-    }
-    .pricing-cta-check {
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      border: 2px solid #16a34a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #16a34a;
-      flex-shrink: 0;
-    }
-    .pricing-cta-link {
-      font-size: 14px;
-      font-weight: 800;
-      color: #2563eb;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-    .pricing-cta-link:hover {
-      text-decoration: underline;
-    }
-    .pricing-limit-box {
-      margin-top: 16px;
-      max-width: 420px;
-      margin-left: auto;
-      margin-right: auto;
-      background: #fef3c7;
-      border-radius: 14px;
-      padding: 10px 12px;
-      text-align: center;
-      font-size: 13px;
-      color: #92400e;
-      font-weight: 600;
-    }
-
-    /* ===== PAKET HEMAT ===== */
-    .pricing-card-secondary {
-      margin-top: 20px;
-      background: #ffffff;
-      border-radius: 22px;
-      border: 1px solid #d1d5db;
-      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
-      padding: 22px 20px 22px;
-    }
-    .pricing-card-secondary-title {
-      text-align: center;
-      font-size: 18px;
-      font-weight: 800;
-      margin: 4px 0 14px;
-      color: #111827;
-    }
-    .price-box-secondary {
-      margin: 0 auto 16px;
-      max-width: 360px;
-      background: #f9fafb;
-      border-radius: 18px;
-      padding: 14px 16px 16px;
-      text-align: center;
-      border: 1px solid #e5e7eb;
-    }
-    .price-box-secondary .price-normal {
-      font-size: 13px;
-      color: #9ca3af;
-      text-decoration: line-through;
-      margin-bottom: 6px;
-    }
-    .price-box-secondary .price-main {
-      font-size: 32px;
-      font-weight: 900;
-      color: #16a34a;
-      margin: 0 0 4px;
-    }
-    .price-box-secondary .price-note {
-      font-size: 12px;
-      color: #4b5563;
-      margin: 0;
-    }
-    .pricing-list-secondary {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0 0;
-    }
-    .pricing-list-secondary li {
-      font-size: 13px;
-      line-height: 1.6;
-      margin-bottom: 6px;
-      color: #374151;
-      text-align: left;
-      display: flex;
-      gap: 6px;
-      align-items: flex-start;
-    }
-    .pricing-list-secondary li span.icon {
-      flex-shrink: 0;
-      font-size: 16px;
-      margin-top: 2px;
-    }
-    .pricing-list-secondary li span.text {
-      flex: 1;
-    }
-    .secondary-cta-wrapper {
-      margin-top: 18px;
-      display: flex;
-      justify-content: center;
-    }
-    .secondary-cta {
-      display: inline-block;
-      background: #eff6ff;
-      border-radius: 18px;
-      padding: 12px 18px;
-      font-size: 14px;
-      font-weight: 800;
-      color: #2563eb;
-      text-decoration: none;
-      text-transform: uppercase;
-      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.25);
-      text-align: center;
-    }
-    .secondary-cta:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 640px) {
+      /* ====== KARTU PAKET LENGKAP ====== */
       .pricing-card {
-        padding: 24px 16px 22px;
+        margin-top: 20px;
+        background: #ecfff2;
+        border-radius: 22px;
+        border: 2px solid #22c55e;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+        padding: 26px 20px 24px;
+        position: relative;
       }
-      .price-main,
-      .price-box-secondary .price-main {
-        font-size: 28px;
+      .pricing-badge {
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fbbf24;
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        padding: 6px 18px;
+        border-radius: 999px;
+        box-shadow: 0 10px 24px rgba(245, 158, 11, 0.35);
+        text-transform: uppercase;
+        text-align: center;
       }
+      .pricing-card-inner {
+        margin-top: 12px;
+      }
+      .pricing-card-title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 800;
+        margin: 8px 0 4px;
+      }
+      .pricing-card-total {
+        text-align: center;
+        font-size: 15px;
+        margin: 0 0 18px;
+      }
+      .pricing-card-total strong {
+        font-weight: 800;
+      }
+      .price-box {
+        margin: 0 auto 18px;
+        max-width: 360px;
+        background: #ffffff;
+        border-radius: 18px;
+        box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+        padding: 14px 16px 16px;
+        text-align: center;
+      }
+      .price-normal {
+        font-size: 13px;
+        color: #9ca3af;
+        text-decoration: line-through;
+        margin-bottom: 6px;
+      }
+      .price-main {
+        font-size: 32px;
+        font-weight: 900;
+        color: #16a34a;
+        margin: 0 0 4px;
+      }
+      .price-note {
+        font-size: 12px;
+        color: #4b5563;
+        margin: 0;
+      }
+      .pricing-content {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #111827;
+      }
+      .pricing-content-title {
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .pricing-list {
+        list-style: none;
+        padding: 0;
+        margin: 8px 0 0;
+      }
+      .pricing-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 8px;
+        font-size: 13px;
+        line-height: 1.6;
+        color: #374151;
+      }
+      .pricing-list li .check-icon {
+        font-size: 20px;
+        line-height: 1;
+        margin-top: 1px;
+        flex-shrink: 0;
+      }
+      .pricing-guarantee {
+        margin-top: 14px;
+        font-size: 13px;
+        color: #047857;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .pricing-guarantee-icon {
+        font-size: 18px;
+      }
+      .pricing-cta-box {
+        margin-top: 20px;
+        background: #dcfce7;
+        border-radius: 18px;
+        padding: 14px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        box-shadow: 0 12px 30px rgba(16, 185, 129, 0.3);
+      }
+      .pricing-cta-check {
+        width: 22px;
+        height: 22px;
+        border-radius: 999px;
+        border: 2px solid #16a34a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #16a34a;
+        flex-shrink: 0;
+      }
+      .pricing-cta-link {
+        font-size: 14px;
+        font-weight: 800;
+        color: #2563eb;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: default;
+      }
+      .pricing-limit-box {
+        margin-top: 16px;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #fef3c7;
+        border-radius: 14px;
+        padding: 10px 12px;
+        text-align: center;
+        font-size: 13px;
+        color: #92400e;
+        font-weight: 600;
+      }
+
+      /* ===== PAKET HEMAT ===== */
       .pricing-card-secondary {
-        padding: 20px 16px 20px;
+        margin-top: 20px;
+        background: #ffffff;
+        border-radius: 22px;
+        border: 1px solid #d1d5db;
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+        padding: 22px 20px 22px;
       }
-    }
-
-    /* ===== CHECKOUT & METODE PEMBAYARAN ===== */
-    .checkout-section {
-      margin-top: 32px;
-      padding: 24px 18px 28px;
-      border-radius: 20px;
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
-    }
-    .checkout-title {
-      font-size: 22px;
-      font-weight: 800;
-      color: #111827;
-      text-align: center;
-      margin: 0 0 6px;
-    }
-    .checkout-subtitle {
-      font-size: 14px;
-      color: #4b5563;
-      text-align: center;
-      margin: 0;
-    }
-    .checkout-arrows {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-    .checkout-arrows span {
-      width: 26px;
-      height: 26px;
-      border-radius: 10px;
-      background: #dcfce7;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      color: #16a34a;
-      animation: arrowBounce 1.8s infinite ease-in-out;
-    }
-    .checkout-arrows span:nth-child(1),
-    .checkout-arrows span:nth-child(3) {
-      opacity: 0.5;
-    }
-    .checkout-arrows span:nth-child(2) {
-      animation-delay: 0.15s;
-    }
-
-    .checkout-form {
-      margin-top: 20px;
-      max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .checkout-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .form-group label {
-      font-size: 13px;
-      font-weight: 600;
-      color: #374151;
-      text-align: left;
-    }
-    .form-input,
-    .form-select,
-    .form-textarea {
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid #d1d5db;
-      background: #f9fafb;
-      padding: 10px 12px;
-      font-size: 14px;
-      outline: none;
-      box-sizing: border-box;
-    }
-    .form-input:focus,
-    .form-select:focus,
-    .form-textarea:focus {
-      border-color: #22c55e;
-      box-shadow: 0 0 0 1px #bbf7d0;
-      background: #ffffff;
-    }
-    .phone-row {
-      display: flex;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #d1d5db;
-      background: #f9fafb;
-    }
-    .phone-prefix {
-      padding: 10px 12px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #111827;
-      border-right: 1px solid #e5e7eb;
-      background: #f3f4f6;
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-    }
-    .phone-input {
-      border: none;
-      flex: 1;
-      padding: 10px 12px;
-      font-size: 14px;
-      background: transparent;
-      outline: none;
-    }
-    .form-textarea {
-      min-height: 80px;
-      resize: vertical;
-    }
-
-    .checkout-subheading {
-      margin: 4px 0 10px;
-      font-size: 16px;
-      font-weight: 700;
-      color: #111827;
-      text-align: left;
-    }
-
-    .payment-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .payment-option {
-      display: flex;
-      align-items: stretch;
-      gap: 10px;
-      background: #f9fafb;
-      border-radius: 14px;
-      border: 1px solid #e5e7eb;
-      padding: 10px 14px;
-      cursor: pointer;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-    }
-    .payment-option:hover {
-      border-color: #22c55e;
-      background: #ecfdf5;
-      box-shadow: 0 10px 24px rgba(16, 185, 129, 0.15);
-    }
-    .payment-option input[type="radio"] {
-      margin-top: 4px;
-      flex-shrink: 0;
-      accent-color: #16a34a;
-    }
-    .payment-main {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .pay-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 700;
-      color: #ffffff;
-      flex-shrink: 0;
-    }
-    .pay-dana    { background: #0f70d8; }
-    .pay-gopay   { background: #00aeda; }
-    .pay-va      { background: #4b5563; }
-    .pay-qris    { background: #111827; }
-    .pay-shopee  { background: #f97316; }
-    .pay-bri     { background: #1d4ed8; }
-    .pay-mandiri { background: #f59e0b; }
-
-    .payment-text-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #111827;
-    }
-    .payment-text-desc {
-      font-size: 12px;
-      color: #6b7280;
-      margin-top: 2px;
-    }
-
-    /* TOMBOL ORDER SEKARANG DI DALAM CHECKOUT */
-    .final-order-btn-wrap {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-    }
-    .final-order-btn {
-      width: 100%;
-      max-width: 520px;
-      padding: 14px 32px;
-      border-radius: 8px;
-      border: none;
-      background: #03a9f4;
-      color: #ffffff;
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      cursor: pointer;
-      box-shadow: 0 12px 28px rgba(3, 169, 244, 0.4);
-    }
-    .final-order-btn:hover {
-      opacity: 0.95;
-    }
-
-    @media (max-width: 640px) {
-      .checkout-section {
-        padding: 20px 14px 24px;
+      .pricing-card-secondary-title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 800;
+        margin: 4px 0 14px;
+        color: #111827;
       }
-    }
+      .price-box-secondary {
+        margin: 0 auto 16px;
+        max-width: 360px;
+        background: #f9fafb;
+        border-radius: 18px;
+        padding: 14px 16px 16px;
+        text-align: center;
+        border: 1px solid #e5e7eb;
+      }
+      .price-box-secondary .price-normal {
+        font-size: 13px;
+        color: #9ca3af;
+        text-decoration: line-through;
+        margin-bottom: 6px;
+      }
+      .price-box-secondary .price-main {
+        font-size: 32px;
+        font-weight: 900;
+        color: #16a34a;
+        margin: 0 0 4px;
+      }
+      .price-box-secondary .price-note {
+        font-size: 12px;
+        color: #4b5563;
+        margin: 0;
+      }
+      .pricing-list-secondary {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0;
+      }
+      .pricing-list-secondary li {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 6px;
+        color: #374151;
+        text-align: left;
+        display: flex;
+        gap: 6px;
+        align-items: flex-start;
+      }
+      .pricing-list-secondary li span.icon {
+        flex-shrink: 0;
+        font-size: 16px;
+        margin-top: 2px;
+      }
+      .pricing-list-secondary li span.text {
+        flex: 1;
+      }
+      .secondary-cta-wrapper {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+      }
+      .secondary-cta {
+        display: inline-block;
+        background: #eff6ff;
+        border-radius: 18px;
+        padding: 12px 18px;
+        font-size: 14px;
+        font-weight: 800;
+        color: #2563eb;
+        text-transform: uppercase;
+        box-shadow: 0 12px 28px rgba(37, 99, 235, 0.25);
+        text-align: center;
+        cursor: default;
+        text-decoration: none;
+      }
 
-    /* ===== FAQ SECTION ===== */
-    .faq-section {
-      margin-top: 32px;
-    }
-    .faq-wrapper {
-      background: #e6f4ff;
-      border-radius: 22px;
-      padding: 22px 18px 24px;
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
-    }
-    .faq-title {
-      font-size: 22px;
-      font-weight: 800;
-      color: #111827;
-      margin: 0 0 16px;
-      text-align: left;
-    }
-    .faq-title span {
-      margin-right: 4px;
-    }
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .faq-item {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 14px 16px;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-    }
-    .faq-item-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-    }
-    .faq-question {
-      font-size: 14px;
-      font-weight: 700;
-      color: #111827;
-      text-align: left;
-    }
-    .faq-toggle {
-      margin-left: auto;
-      font-size: 18px;
-      font-weight: 800;
-      color: #16a34a;
-    }
-    .faq-item-body {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #4b5563;
-      line-height: 1.6;
-      display: none;
-    }
-    .faq-item-body p {
-      margin: 0;
-      text-align: left;
-    }
-    .faq-item.open .faq-item-body {
-      display: block;
-    }
+      @media (max-width: 640px) {
+        .pricing-card {
+          padding: 24px 16px 22px;
+        }
+        .price-main,
+        .price-box-secondary .price-main {
+          font-size: 28px;
+        }
+        .pricing-card-secondary {
+          padding: 20px 16px 20px;
+        }
+      }
 
-    /* POPUP GLOBAL */
-    .popup-notif {
-      position: fixed;
-      bottom: 26px;
-      right: 26px;
-      z-index: 9999;
+      /* ===== FAQ SECTION ===== */
+      .faq-section {
+        margin-top: 32px;
+      }
+      .faq-wrapper {
+        background: #e6f4ff;
+        border-radius: 22px;
+        padding: 22px 18px 24px;
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+      }
+      .faq-title {
+        font-size: 22px;
+        font-weight: 800;
+        color: #111827;
+        margin: 0 0 16px;
+        text-align: left;
+      }
+      .faq-title span {
+        margin-right: 4px;
+      }
+      .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .faq-item {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 14px 16px;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      }
+      .faq-item-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+      }
+      .faq-question {
+        font-size: 14px;
+        font-weight: 700;
+        color: #111827;
+        text-align: left;
+      }
+      .faq-toggle {
+        margin-left: auto;
+        font-size: 18px;
+        font-weight: 800;
+        color: #16a34a;
+      }
+      .faq-item-body {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #4b5563;
+        line-height: 1.6;
+        display: none;
+      }
+      .faq-item-body p {
+        margin: 0;
+        text-align: left;
+      }
+      .faq-item.open .faq-item-body {
+        display: block;
+      }
 
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      /* POPUP GLOBAL – versi kecil */
+      .popup-notif {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #fffceb;
+        border-radius: 14px;
+        padding: 10px 14px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        border-left: 5px solid #fbbf24;
+        width: 260px;
+        opacity: 0;
+        transform: translateY(16px);
+        pointer-events: none;
+        transition: all .35s ease;
+      }
+      .popup-notif.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .notif-avatar {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: linear-gradient(135deg,#60a5fa,#2563eb);
+        color: #fff;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+      }
+      .notif-name {
+        font-weight: 700;
+        color: #111;
+        font-size: 14px;
+        margin-bottom: -2px;
+      }
+      .notif-job {
+        font-size: 11px;
+        color: #6b7280;
+        margin-bottom: 2px;
+      }
+      .notif-text {
+        color: #059669;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.3;
+      }
+      .notif-time {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="lp-wrapper">
+      <div class="badge">LAUNDRY SUKSES</div>
 
-      background: #fffceb;
-      border-radius: 18px;
-      padding: 14px 18px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-      border-left: 6px solid #fbbf24;
+      <p class="sub-headline">🔥 Modal Kecil, Profit Maksimal!</p>
 
-      width: 310px;
-      opacity: 0;
-      transform: translateY(20px);
-      pointer-events: none;
-      transition: all .4s ease;
-    }
+      <h1>
+        Bangun Bisnis Laundry Rumahan yang Cepat Balik Modal<br />
+        <span class="highlight">Pemula Wajib Punya!</span>
+      </h1>
 
-    .popup-notif.show {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-
-    /* Avatar */
-    .notif-avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg,#60a5fa,#2563eb);
-      color: #fff;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-
-    /* Info */
-    .notif-name {
-      font-weight: 700;
-      color: #111;
-      font-size: 15px;
-    }
-    .notif-city {
-      color: #444;
-    }
-
-    .notif-job {
-      font-size: 13px;
-      color: #6b7280;
-      margin-top: -2px;
-    }
-
-    .notif-text {
-      color: #059669;
-      font-weight: 700;
-      font-size: 13px;
-      margin-top: 3px;
-    }
-
-    .notif-time {
-      font-size: 12px;
-      color: #6b7280;
-      margin-top: 2px;
-    }
-  </style>
-</head>
-<body>
-  <main class="lp-wrapper">
-    <div class="badge">LAUNDRY SUKSES</div>
-
-    <p class="sub-headline">🔥 Modal Kecil, Profit Maksimal!</p>
-
-    <h1>
-      Bangun Bisnis Laundry Rumahan yang Cepat Balik Modal<br />
-      <span class="highlight">Pemula Wajib Punya!</span>
-    </h1>
-
-    <p>
-      <strong>Takut usaha rugi?</strong> Mulai bisnis laundry dengan cara yang benar!  
-      E-book ini berisi langkah praktis memulai laundry rumahan modal kecil yang cepat balik modal — cocok untuk pemula.
-    </p>
-
-    <!-- KARTU E-BOOK + CTA -->
-    <section class="product-section">
-      <div class="product-card-wrapper">
-        <div class="product-card-outer">
-          <div class="product-card-inner">
-            <div>
-              <span>E-BOOK</span>
-              <strong>LAUNDRY RUMAHAN</strong>
-              <small>Panduan Cepat Balik Modal</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta-banner">
-        <div class="cta-banner-icon">✓</div>
-        <a href="#paket">LIHAT PILIHAN PAKET PROFIT ANDA!</a>
-      </div>
-
-      <div class="note-under-cta">
-        *Jangan cuma lihat orang lain sukses. Kini giliran Anda!*
-      </div>
-    </section>
-
-    <!-- KESALAHAN FATAL -->
-    <section class="fatal-section">
-      <h2 class="fatal-heading">
-        Hindari 5 Kesalahan Mematikan di Bisnis Laundry 
-        <span class="fatal-emoji">😱</span>
-      </h2>
-      <p class="fatal-subtitle">
-        Satu langkah salah bisa bikin rugi. Pastikan Anda tidak terjebak dalam kesalahan yang sama
-      </p>
-
-      <div class="fatal-list">
-        <div class="fatal-card">
-          <div class="fatal-icon">🌀</div>
-          <div>
-            <p class="fatal-text-title">Buka Laundry Karena Ikut Tren</p>
-            <p class="fatal-text-desc">
-              Mulai usaha karena lihat orang lain sukses, tanpa persiapan dan perhitungan bisnis.
-            </p>
-          </div>
-        </div>
-
-        <div class="fatal-card">
-          <div class="fatal-icon">🛒</div>
-          <div>
-            <p class="fatal-text-title">Belanja Peralatan Secara Kalap</p>
-            <p class="fatal-text-desc">
-              Mesin besar & perlengkapan mahal dibeli tanpa tahu mana yang paling dibutuhkan dulu.
-            </p>
-          </div>
-        </div>
-
-        <div class="fatal-card">
-          <div class="fatal-icon">📉</div>
-          <div>
-            <p class="fatal-text-title">Ramai Order Tapi Profit Bocor</p>
-            <p class="fatal-text-desc">
-              Harga tidak dihitung benar, biaya listrik, air, sabun tidak masuk perhitungan.
-            </p>
-          </div>
-        </div>
-
-        <div class="fatal-card">
-          <div class="fatal-icon">🚫</div>
-          <div>
-            <p class="fatal-text-title">Pelanggan Tidak Kembali Lagi</p>
-            <p class="fatal-text-desc">
-              Kualitas hasil tidak konsisten: bau masih ada, noda tertinggal, atau telat selesai.
-            </p>
-          </div>
-        </div>
-
-        <div class="fatal-card">
-          <div class="fatal-icon">⚙️</div>
-          <div>
-            <p class="fatal-text-title">Semua Dikerjakan Tanpa Sistem</p>
-            <p class="fatal-text-desc">
-              Tanpa alur kerja dan pembagian tugas, pemilik cepat kewalahan dan kualitas menurun.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION RAHASIA BISNIS - SLIDER -->
-    <section class="secrets-section">
-      <!-- JUDUL + PANAH -->
-      <div class="arrow-title-wrap">
-        <h2 class="arrow-title">
-          Rahasia <span>Bisnis Laundry</span> yang Akan Anda Kuasai
-        </h2>
-        <p class="secrets-subtitle">
-          Langkah demi langkah yang dirancang khusus untuk pemula, bahkan yang belum pernah berbisnis sekalipun.
-        </p>
-
-        <div class="secrets-scroll-wrapper">
-          <div class="secrets-row">
-
-            <div class="secret-card">
-              <div class="secret-icon">📊</div>
-              <h3 class="secret-title">Rencana Modal yang Aman</h3>
-              <p class="secret-desc">
-                Cara menyusun anggaran mesin, deterjen, dan kebutuhan awal agar modal lebih terkontrol.
-              </p>
-            </div>
-
-            <div class="secret-card">
-              <div class="secret-icon">📍</div>
-              <h3 class="secret-title">Jangkauan & Lokasi Menguntungkan</h3>
-              <p class="secret-desc">
-                Menentukan area layanan dan sistem antar–jemput yang paling potensial di sekitar rumah Anda.
-              </p>
-            </div>
-
-            <div class="secret-card">
-              <div class="secret-icon">🧼</div>
-              <h3 class="secret-title">Teknik Cuci & Perawatan Kain</h3>
-              <p class="secret-desc">
-                Tips praktis agar cucian bersih, wangi, dan tidak merusak jenis kain pelanggan.
-              </p>
-            </div>
-
-            <div class="secret-card">
-              <div class="secret-icon">💰</div>
-              <h3 class="secret-title">Harga Jasa yang Sehat</h3>
-              <p class="secret-desc">
-                Rumus menentukan harga per kilo yang masuk akal, tetap kompetitif dan tetap untung.
-              </p>
-            </div>
-
-            <div class="secret-card">
-              <div class="secret-icon">🎯</div>
-              <h3 class="secret-title">Pelanggan Pertama & Repeat Order</h3>
-              <p class="secret-desc">
-                Strategi simpel agar laundry cepat dikenal dan pelanggan senang kembali berkali-kali.
-              </p>
-            </div>
-
-            <div class="secret-card">
-              <div class="secret-icon">⚙️</div>
-              <h3 class="secret-title">SOP Operasional yang Rapi</h3>
-              <p class="secret-desc">
-                Alur kerja harian yang jelas supaya Anda tidak kewalahan saat order mulai ramai.
-              </p>
-            </div>
-
-          </div>
-        </div>
-        <p style="
-          text-align:center;
-          font-size:14px;
-          color:#6b7280;
-          font-style:italic;
-          margin-top:16px;
-        ">
-          “Mulai profit lebih cepat dengan panduan praktis ini.”
-        </p>
-      </div>
-    </section>
-
-    <!-- CTA PENUTUP -->
-    <div class="cta-box">
-      <div class="cta-title">🚀 Siap Bangun Bisnis Laundry Anda Sendiri?</div>
       <p>
-        Mulai sekarang sebelum kompetitor makin banyak! E-book ini adalah
-        <strong>jalan pintas</strong> menuju bisnis laundry yang stabil dan menguntungkan.
+        <strong>Takut usaha rugi?</strong> Mulai bisnis laundry dengan cara yang benar!
+        E-book ini berisi langkah praktis memulai laundry rumahan modal kecil yang cepat balik modal — cocok untuk pemula.
       </p>
-      <a href="#checkout" class="cta-btn">
-        Dapatkan E-Book Laundry Rumahan Sekarang
-      </a>
-    </div>
 
-    <!-- SECTION TESTIMONI -->
-    <section class="testimonial-section">
-      <div class="testimonial-title-wrap">
-        <h2 class="testimonial-heading">
-          Masih Ragu Memulai <span>Bisnis Laundry?</span>
+      <!-- KARTU E-BOOK + CTA -->
+      <section class="product-section">
+        <div class="product-card-wrapper">
+          <div class="product-card-outer">
+            <div class="product-card-inner">
+              <div>
+                <span>E-BOOK</span>
+                <strong>LAUNDRY RUMAHAN</strong>
+                <small>Panduan Cepat Balik Modal</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-banner">
+          <div class="cta-banner-icon">✓</div>
+          <a href="#paket">LIHAT PILIHAN PAKET PROFIT ANDA!</a>
+        </div>
+
+        <div class="note-under-cta">
+          *Jangan cuma lihat orang lain sukses. Kini giliran Anda!*
+        </div>
+      </section>
+
+      <!-- KESALAHAN FATAL -->
+      <section class="fatal-section">
+        <h2 class="fatal-heading">
+          Hindari 5 Kesalahan Mematikan di Bisnis Laundry 
+          <span class="fatal-emoji">😱</span>
         </h2>
-        <p class="testimonial-sub-main">
-          Simak pengalaman nyata para pemula yang memulai bisnis laundry
-          dengan bantuan panduan ini.
+        <p class="fatal-subtitle">
+          Satu langkah salah bisa bikin rugi. Pastikan Anda tidak terjebak dalam kesalahan yang sama
         </p>
 
-        <div class="testimonial-slider">
-
-          <article class="testimonial-card active" data-index="0">
-            <div class="testimonial-inner">
-              <div class="testimonial-header">
-                <div class="avatar-circle avatar-1">L</div>
-                <div>
-                  <div class="testimonial-name">Laila, 27 tahun</div>
-                  <div class="testimonial-meta">Buka 2 bulan lalu | Bandung</div>
-                </div>
-              </div>
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-text">
-                "Saya ibu rumah tangga yang awalnya bingung mulai dari mana.
-                Panduan ini bantu saya hitung modal dan atur paket layanan.
-                Sekarang hampir tiap hari ada cucian masuk dari tetangga."
+        <div class="fatal-list">
+          <div class="fatal-card">
+            <div class="fatal-icon">🌀</div>
+            <div>
+              <p class="fatal-text-title">Buka Laundry Karena Ikut Tren</p>
+              <p class="fatal-text-desc">
+                Mulai usaha karena lihat orang lain sukses, tanpa persiapan dan perhitungan bisnis.
               </p>
             </div>
-          </article>
+          </div>
 
-          <article class="testimonial-card" data-index="1">
-            <div class="testimonial-inner">
-              <div class="testimonial-header">
-                <div class="avatar-circle avatar-2">F</div>
-                <div>
-                  <div class="testimonial-name">Fajar, 34 tahun</div>
-                  <div class="testimonial-meta">Buka 5 bulan lalu | Depok</div>
-                </div>
-              </div>
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-text">
-                "Modal saya terbatas, jadi takut salah beli peralatan.
-                Dari e-book ini saya tahu prioritas peralatan dan cara atur harga.
-                Dalam 3 bulan, modal sudah kembali dan sekarang fokus nambah pelanggan."
+          <div class="fatal-card">
+            <div class="fatal-icon">🛒</div>
+            <div>
+              <p class="fatal-text-title">Belanja Peralatan Secara Kalap</p>
+              <p class="fatal-text-desc">
+                Mesin besar &amp; perlengkapan mahal dibeli tanpa tahu mana yang paling dibutuhkan dulu.
               </p>
             </div>
-          </article>
+          </div>
 
-          <article class="testimonial-card" data-index="2">
-            <div class="testimonial-inner">
-              <div class="testimonial-header">
-                <div class="avatar-circle avatar-3">S</div>
-                <div>
-                  <div class="testimonial-name">Sinta, 30 tahun</div>
-                  <div class="testimonial-meta">Usaha sampingan | Bekasi</div>
-                </div>
-              </div>
-              <div class="testimonial-stars">★★★★★</div>
-              <p class="testimonial-text">
-                "Saya masih kerja kantoran, jadi butuh sistem yang rapi.
-                Bagian SOP dan manajemen waktu di panduan ini sangat membantu.
-                Order bisa jalan, tapi saya tetap punya waktu untuk pekerjaan utama."
+          <div class="fatal-card">
+            <div class="fatal-icon">📉</div>
+            <div>
+              <p class="fatal-text-title">Ramai Order Tapi Profit Bocor</p>
+              <p class="fatal-text-desc">
+                Harga tidak dihitung benar, biaya listrik, air, sabun tidak masuk perhitungan.
               </p>
             </div>
-          </article>
+          </div>
 
+          <div class="fatal-card">
+            <div class="fatal-icon">🚫</div>
+            <div>
+              <p class="fatal-text-title">Pelanggan Tidak Kembali Lagi</p>
+              <p class="fatal-text-desc">
+                Kualitas hasil tidak konsisten: bau masih ada, noda tertinggal, atau telat selesai.
+              </p>
+            </div>
+          </div>
+
+          <div class="fatal-card">
+            <div class="fatal-icon">⚙️</div>
+            <div>
+              <p class="fatal-text-title">Semua Dikerjakan Tanpa Sistem</p>
+              <p class="fatal-text-desc">
+                Tanpa alur kerja dan pembagian tugas, pemilik cepat kewalahan dan kualitas menurun.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="testimonial-dots">
-          <button class="testimonial-dot active" data-index="0"></button>
-          <button class="testimonial-dot" data-index="1"></button>
-          <button class="testimonial-dot" data-index="2"></button>
+      <!-- SECTION RAHASIA BISNIS - SLIDER -->
+      <section class="secrets-section">
+        <div class="arrow-title-wrap">
+          <h2 class="arrow-title">
+            Rahasia <span>Bisnis Laundry</span> yang Akan Anda Kuasai
+          </h2>
+          <p class="secrets-subtitle">
+            Langkah demi langkah yang dirancang khusus untuk pemula, bahkan yang belum pernah berbisnis sekalipun.
+          </p>
+
+          <div class="secrets-scroll-wrapper">
+            <div class="secrets-row">
+
+              <div class="secret-card">
+                <div class="secret-icon">📊</div>
+                <h3 class="secret-title">Rencana Modal yang Aman</h3>
+                <p class="secret-desc">
+                  Cara menyusun anggaran mesin, deterjen, dan kebutuhan awal agar modal lebih terkontrol.
+                </p>
+              </div>
+
+              <div class="secret-card">
+                <div class="secret-icon">📍</div>
+                <h3 class="secret-title">Jangkauan &amp; Lokasi Menguntungkan</h3>
+                <p class="secret-desc">
+                  Menentukan area layanan dan sistem antar–jemput yang paling potensial di sekitar rumah Anda.
+                </p>
+              </div>
+
+              <div class="secret-card">
+                <div class="secret-icon">🧼</div>
+                <h3 class="secret-title">Teknik Cuci &amp; Perawatan Kain</h3>
+                <p class="secret-desc">
+                  Tips praktis agar cucian bersih, wangi, dan tidak merusak jenis kain pelanggan.
+                </p>
+              </div>
+
+              <div class="secret-card">
+                <div class="secret-icon">💰</div>
+                <h3 class="secret-title">Harga Jasa yang Sehat</h3>
+                <p class="secret-desc">
+                  Rumus menentukan harga per kilo yang masuk akal, tetap kompetitif dan tetap untung.
+                </p>
+              </div>
+
+              <div class="secret-card">
+                <div class="secret-icon">🎯</div>
+                <h3 class="secret-title">Pelanggan Pertama &amp; Repeat Order</h3>
+                <p class="secret-desc">
+                  Strategi simpel agar laundry cepat dikenal dan pelanggan senang kembali berkali-kali.
+                </p>
+              </div>
+
+              <div class="secret-card">
+                <div class="secret-icon">⚙️</div>
+                <h3 class="secret-title">SOP Operasional yang Rapi</h3>
+                <p class="secret-desc">
+                  Alur kerja harian yang jelas supaya Anda tidak kewalahan saat order mulai ramai.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <p style="
+            text-align:center;
+            font-size:14px;
+            color:#6b7280;
+            font-style:italic;
+            margin-top:16px;
+          ">
+            “Mulai profit lebih cepat dengan panduan praktis ini.”
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SECTION JUDUL PILIHAN PAKET -->
-    <section class="package-heading-section">
-      <h2 class="package-heading">
-        Tentukan Paket Terbaik untuk Memulai
-        <span>Bisnis Laundry Anda</span>
-      </h2>
-      <p class="package-subtext">
-        Pilih akses yang sesuai kebutuhan Anda dan mulai bangun bisnis laundry yang lebih menguntungkan.
-      </p>
-    </section>
-
-    <!-- KARTU PAKET LENGKAP -->
-    <section class="pricing-card" id="paket">
-      <div class="pricing-badge">
-        PALING LENGKAP & DIREKOMENDASIKAN!
-      </div>
-
-      <div class="pricing-card-inner">
-        <h3 class="pricing-card-title">PAKET LENGKAP LAUNDRY RUMAHAN</h3>
-        <p class="pricing-card-total">
-          Total Nilai Materi &amp; Bonus: <strong>Rp324.000</strong>
+      <!-- CTA PENUTUP -->
+      <div class="cta-box">
+        <div class="cta-title">🚀 Siap Bangun Bisnis Laundry Anda Sendiri?</div>
+        <p>
+          Mulai sekarang sebelum kompetitor makin banyak! E-book ini adalah
+          <strong>jalan pintas</strong> menuju bisnis laundry yang stabil dan menguntungkan.
         </p>
+        <div class="cta-btn">
+          Dapatkan E-Book Laundry Rumahan Sekarang
+        </div>
+      </div>
 
-        <div class="price-box">
-          <div class="price-normal">Harga Normal Rp324.000</div>
-          <div class="price-main">Rp149.000</div>
+      <!-- SECTION TESTIMONI -->
+      <section class="testimonial-section">
+        <div class="testimonial-title-wrap">
+          <h2 class="testimonial-heading">
+            Masih Ragu Memulai <span>Bisnis Laundry?</span>
+          </h2>
+          <p class="testimonial-sub-main">
+            Simak pengalaman nyata para pemula yang memulai bisnis laundry
+            dengan bantuan panduan ini.
+          </p>
+
+          <div class="testimonial-slider">
+
+            <article class="testimonial-card active" data-index="0">
+              <div class="testimonial-inner">
+                <div class="testimonial-header">
+                  <div class="avatar-circle avatar-1">L</div>
+                  <div class="testimonial-header-text">
+                    <div class="testimonial-name">Laila, 27 tahun</div>
+                    <div class="testimonial-meta">Buka 2 bulan lalu | Bandung</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                  "Saya ibu rumah tangga yang awalnya bingung mulai dari mana.
+                  Panduan ini bantu saya hitung modal dan atur paket layanan.
+                  Sekarang hampir tiap hari ada cucian masuk dari tetangga."
+                </p>
+              </div>
+            </article>
+
+            <article class="testimonial-card" data-index="1">
+              <div class="testimonial-inner">
+                <div class="testimonial-header">
+                  <div class="avatar-circle avatar-2">F</div>
+                  <div class="testimonial-header-text">
+                    <div class="testimonial-name">Fajar, 34 tahun</div>
+                    <div class="testimonial-meta">Buka 5 bulan lalu | Depok</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                  "Modal saya terbatas, jadi takut salah beli peralatan.
+                  Dari e-book ini saya tahu prioritas peralatan dan cara atur harga.
+                  Dalam 3 bulan, modal sudah kembali dan sekarang fokus nambah pelanggan."
+                </p>
+              </div>
+            </article>
+
+            <article class="testimonial-card" data-index="2">
+              <div class="testimonial-inner">
+                <div class="testimonial-header">
+                  <div class="avatar-circle avatar-3">S</div>
+                  <div class="testimonial-header-text">
+                    <div class="testimonial-name">Sinta, 30 tahun</div>
+                    <div class="testimonial-meta">Usaha sampingan | Bekasi</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                  "Saya masih kerja kantoran, jadi butuh sistem yang rapi.
+                  Bagian SOP dan manajemen waktu di panduan ini sangat membantu.
+                  Order bisa jalan, tapi saya tetap punya waktu untuk pekerjaan utama."
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="testimonial-dots">
+            <button class="testimonial-dot active" data-index="0"></button>
+            <button class="testimonial-dot" data-index="1"></button>
+            <button class="testimonial-dot" data-index="2"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION JUDUL PILIHAN PAKET -->
+      <section class="package-heading-section">
+        <h2 class="package-heading">
+          Tentukan Paket Terbaik untuk Memulai
+          <span>Bisnis Laundry Anda</span>
+        </h2>
+        <p class="package-subtext">
+          Pilih akses yang sesuai kebutuhan Anda dan mulai bangun bisnis laundry yang lebih menguntungkan.
+        </p>
+      </section>
+
+      <!-- KARTU PAKET LENGKAP -->
+      <section class="pricing-card" id="paket">
+        <div class="pricing-badge">
+          PALING LENGKAP &amp; DIREKOMENDASIKAN!
+        </div>
+
+        <div class="pricing-card-inner">
+          <h3 class="pricing-card-title">PAKET LENGKAP LAUNDRY RUMAHAN</h3>
+          <p class="pricing-card-total">
+            Total Nilai Materi &amp; Bonus: <strong>Rp324.000</strong>
+          </p>
+
+          <div class="price-box">
+            <div class="price-normal">Harga Normal Rp324.000</div>
+            <div class="price-main">Rp149.000</div>
+            <p class="price-note">
+              Hemat lebih dari Rp175.000 • Akses Seumur Hidup
+            </p>
+          </div>
+
+          <div class="pricing-content">
+            <div class="pricing-content-title">
+              📘 Panduan Utama: “Blueprint Bisnis Laundry Rumahan”
+              (Nilai <strong>Rp100.000</strong>)
+            </div>
+
+            <ul class="pricing-list">
+              <li>
+                <span class="check-icon">🧺</span>
+                <span>
+                  <strong>BONUS 1:</strong> Template SOP Operasional Laundry (Nilai Rp99.000)
+                </span>
+              </li>
+              <li>
+                <span class="check-icon">📊</span>
+                <span>
+                  <strong>BONUS 2:</strong> Spreadsheet Perhitungan Balik Modal
+                  (Nilai <strong>Rp75.000</strong>)
+                </span>
+              </li>
+              <li>
+                <span class="check-icon">📣</span>
+                <span>
+                  <strong>BONUS 3:</strong> Template promosi laundry siap pakai
+                  (Nilai <strong>Rp50.000</strong>)
+                </span>
+              </li>
+            </ul>
+
+            <div class="pricing-guarantee">
+              <span class="pricing-guarantee-icon">🛡</span>
+              <span>
+                <strong>Garansi 7 Hari:</strong> Jika materi dirasa tidak membantu sama sekali, Anda bisa ajukan uang kembali 100%.
+              </span>
+            </div>
+          </div>
+
+          <div class="pricing-cta-box">
+            <div class="pricing-cta-check">✓</div>
+            <div class="pricing-cta-link">
+              AMBIL PAKET LENGKAP (Rp149.000)
+            </div>
+          </div>
+
+          <div class="pricing-limit-box">
+            Khusus <strong>12 pembeli pertama</strong>, setelah itu harga kembali ke Rp324.000.
+          </div>
+        </div>
+      </section>
+
+      <!-- PAKET HEMAT: E-BOOK SAJA -->
+      <section class="pricing-card-secondary">
+        <h3 class="pricing-card-secondary-title">
+          Opsi Hemat: E-book Panduan Dasar
+        </h3>
+
+        <div class="price-box-secondary">
+          <div class="price-normal">Harga Normal Rp125.000</div>
+          <div class="price-main">Rp100.000</div>
           <p class="price-note">
-            Hemat lebih dari Rp175.000 • Akses Seumur Hidup
+            Akses hanya E-book utama dalam format PDF, tanpa bonus file pendukung.
           </p>
         </div>
 
-        <div class="pricing-content">
-          <div class="pricing-content-title">
-            📘 Panduan Utama: “Blueprint Bisnis Laundry Rumahan”
-            (Nilai <strong>Rp100.000</strong>)
-          </div>
-
-          <ul class="pricing-list">
-            <li>
-              <span class="check-icon">🧺</span>
-              <span>
-                <strong>BONUS 1:</strong> Paket SOP &amp; Alur Kerja Laundry Harian –  
-                mulai dari terima order, sortir, cuci, setrika hingga serah terima ke pelanggan.  
-                (Nilai <strong>Rp99.000</strong>)
-              </span>
-            </li>
-            <li>
-              <span class="check-icon">📊</span>
-              <span>
-                <strong>BONUS 2:</strong> Spreadsheet hitung modal, biaya bulanan, target omzet &amp; titik balik modal  
-                sehingga Anda tahu kapan usaha benar-benar mulai untung.  
-                (Nilai <strong>Rp75.000</strong>)
-              </span>
-            </li>
-            <li>
-              <span class="check-icon">📣</span>
-              <span>
-                <strong>BONUS 3:</strong> Template promosi laundry (ide konten, contoh caption &amp; promo WhatsApp / sosmed)  
-                supaya lebih mudah mendapatkan pelanggan pertama.  
-                (Nilai <strong>Rp50.000</strong>)
-              </span>
-            </li>
-          </ul>
-
-          <div class="pricing-guarantee">
-            <span class="pricing-guarantee-icon">🛡</span>
-            <span>
-              <strong>Garansi 7 Hari:</strong> Jika materi dirasa tidak membantu sama sekali, Anda bisa ajukan uang kembali 100%.
+        <ul class="pricing-list-secondary">
+          <li>
+            <span class="icon">✅</span>
+            <span class="text">
+              E-book utama <strong>“Blueprint Bisnis Laundry Rumahan”</strong> – materi inti lengkap untuk pemula.
             </span>
+          </li>
+          <li>
+            <span class="icon">❌</span>
+            <span class="text">
+              Tidak termasuk paket <strong>SOP &amp; alur kerja laundry harian</strong>.
+            </span>
+          </li>
+          <li>
+            <span class="icon">❌</span>
+            <span class="text">
+              Tidak termasuk <strong>spreadsheet perhitungan modal, biaya bulanan &amp; titik balik modal</strong>.
+            </span>
+          </li>
+          <li>
+            <span class="icon">❌</span>
+            <span class="text">
+              Tidak termasuk <strong>template promosi &amp; bonus konten pemasaran</strong>.
+            </span>
+          </li>
+        </ul>
+
+        <div class="secondary-cta-wrapper">
+          <div id="checkout-hemat" class="secondary-cta">
+            DAPATKAN E-BOOK SAJA (Rp100.000)
           </div>
         </div>
+      </section>
 
-        <div class="pricing-cta-box">
-          <div class="pricing-cta-check">✓</div>
-          <a href="#checkout" class="pricing-cta-link">
-            AMBIL PAKET LENGKAP (Rp149.000)
-          </a>
+      <!-- FAQ SECTION -->
+      <section class="faq-section" id="faq">
+        <div class="faq-wrapper">
+          <h2 class="faq-title">
+            <span>❓</span>FAQ Bisnis Laundry
+          </h2>
+
+          <div class="faq-list">
+            <!-- FAQ 1 -->
+            <div class="faq-item open">
+              <div class="faq-item-header">
+                <div class="faq-question">
+                  🕒 Saya masih kerja, bisa jalanin laundry sebagai usaha sampingan?
+                </div>
+                <div class="faq-toggle">×</div>
+              </div>
+              <div class="faq-item-body">
+                <p>
+                  Bisa. Di panduan ini ada contoh alur kerja dan pembagian tugas untuk pemilik yang tidak selalu di tempat.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <div class="faq-item-header">
+                <div class="faq-question">
+                  📊 Saya belum paham hitung-hitungan bisnis, apa dibahas di e-book?
+                </div>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-item-body">
+                <p>
+                  Ya. Ada panduan sederhana menghitung modal, biaya bulanan, dan perkiraan laba sehingga Anda tahu usaha untung atau tidak.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <div class="faq-item-header">
+                <div class="faq-question">
+                  🏘️ Di sekitar rumah sudah banyak laundry, masih ada peluang?
+                </div>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-item-body">
+                <p>
+                  Masih. Anda akan belajar cara membedakan layanan dan memilih segmen pelanggan yang belum tersentuh kompetitor.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <div class="faq-item-header">
+                <div class="faq-question">
+                  🏡 Rumah saya kecil, bisa mulai laundry dari rumah?
+                </div>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-item-body">
+                <p>
+                  Bisa. Ada tips menata ruang sempit agar mesin, jemuran, dan area setrika tetap rapi dan nyaman.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <div class="faq-item-header">
+                <div class="faq-question">
+                  📱 E-booknya dalam bentuk apa? Bisa dibaca di HP?
+                </div>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-item-body">
+                <p>
+                  E-book dikirim dalam format PDF sehingga bisa dibaca lewat HP, tablet, atau laptop kapan saja.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-item">
+              <div class="faq-item-header">
+                <div class="faq-question">
+                  💬 Kalau setelah membaca saya masih bingung, bisa tanya ke siapa?
+                </div>
+                <div class="faq-toggle">+</div>
+              </div>
+              <div class="faq-item-body">
+                <p>
+                  Anda akan mendapatkan kontak WhatsApp admin untuk bertanya seputar isi panduan dan langkah awal memulai.
+                </p>
+              </div>
+            </div>
+
+            <!-- POPUP NOTIF -->
+            <div id="notifBox" class="popup-notif">
+              <div class="notif-avatar" id="notifAvatar">R</div>
+              <div>
+                <div class="notif-name">
+                  <span id="notifName">Rani</span> · <span id="notifCity">Depok</span>
+                </div>
+                <div class="notif-job" id="notifJob">Karyawan Swasta</div>
+                <div class="notif-text" id="notifText">
+                  ✅ Baru download e-book &amp; bonus lengkap!
+                </div>
+                <div class="notif-time" id="notifTime">1 menit yang lalu</div>
+              </div>
+            </div>
+
+          </div>
         </div>
+      </section>
 
-        <div class="pricing-limit-box">
-          Khusus <strong>12 pembeli pertama</strong>, setelah itu harga kembali ke Rp324.000.
-        </div>
-      </div>
-    </section>
+    </main>
 
-    <!-- PAKET HEMAT: E-BOOK SAJA -->
-    <section class="pricing-card-secondary">
-      <h3 class="pricing-card-secondary-title">
-        Opsi Hemat: E-book Panduan Dasar
-      </h3>
+    <!-- JS slider testimoni + FAQ + smooth scroll + popup -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        /* === SLIDER TESTIMONI === */
+        const dots  = document.querySelectorAll('.testimonial-dot');
+        const cards = document.querySelectorAll('.testimonial-card');
 
-      <div class="price-box-secondary">
-        <div class="price-normal">Harga Normal Rp125.000</div>
-        <div class="price-main">Rp100.000</div>
-        <p class="price-note">
-          Akses hanya E-book utama dalam format PDF, tanpa bonus file pendukung.
-        </p>
-      </div>
+        if (dots.length && cards.length) {
+          dots.forEach(function (dot) {
+            dot.addEventListener('click', function () {
+              const index = this.getAttribute('data-index');
 
-      <ul class="pricing-list-secondary">
-        <li>
-          <span class="icon">✅</span>
-          <span class="text">
-            E-book utama <strong>“Blueprint Bisnis Laundry Rumahan”</strong> – seluruh materi inti tetap lengkap.
-          </span>
-        </li>
-        <li>
-          <span class="icon">❌</span>
-          <span class="text">
-            Tidak termasuk paket <strong>SOP &amp; alur kerja laundry harian</strong>.
-          </span>
-        </li>
-        <li>
-          <span class="icon">❌</span>
-          <span class="text">
-            Tidak termasuk <strong>spreadsheet perhitungan modal, biaya bulanan &amp; titik balik modal</strong>.
-          </span>
-        </li>
-        <li>
-          <span class="icon">❌</span>
-          <span class="text">
-            Tidak termasuk <strong>template promosi &amp; bonus konten pemasaran</strong>.
-          </span>
-        </li>
-      </ul>
+              dots.forEach(d => d.classList.remove('active'));
+              cards.forEach(c => c.classList.remove('active'));
 
-      <div class="secondary-cta-wrapper">
-        <a href="#checkout" id="checkout-hemat" class="secondary-cta">
-          DAPATKAN E-BOOK SAJA (Rp100.000)
-        </a>
-      </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="faq-section" id="faq">
-      <div class="faq-wrapper">
-        <h2 class="faq-title">
-          <span>❓</span>FAQ Bisnis Laundry
-        </h2>
-
-        <div class="faq-list">
-          <!-- FAQ 1 -->
-          <div class="faq-item open">
-            <div class="faq-item-header">
-              <div class="faq-question">
-                1. Saya masih kerja / punya kesibukan lain, apakah bisa jalanin laundry sebagai usaha sampingan?
-              </div>
-              <div class="faq-toggle">×</div>
-            </div>
-            <div class="faq-item-body">
-              <p>
-                Bisa. Di e-book ini ada contoh alur kerja harian dan pembagian tugas yang cocok untuk pemilik
-                yang tidak full di tempat. Anda bisa mulai skala kecil dulu, lalu menambahkan karyawan
-                atau anggota keluarga ketika order mulai ramai.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="faq-item">
-            <div class="faq-item-header">
-              <div class="faq-question">
-                2. Saya belum paham hitung-hitungan bisnis. Apakah di panduan ini diajarkan cara menghitung laba rugi?
-              </div>
-              <div class="faq-toggle">+</div>
-            </div>
-            <div class="faq-item-body">
-              <p>
-                Ya. Kami sertakan contoh sederhana untuk menghitung biaya listrik, air, deterjen, gaji,
-                hingga target omzet. Semua dijelaskan dengan bahasa awam, sehingga Anda yang tidak punya
-                background akuntansi pun bisa mengikuti dan tahu posisi untung–rugi usaha.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="faq-item">
-            <div class="faq-item-header">
-              <div class="faq-question">
-                3. Bagaimana kalau saya tinggal di lingkungan yang sudah banyak laundry, masih ada peluang?
-              </div>
-              <div class="faq-toggle">+</div>
-            </div>
-            <div class="faq-item-body">
-              <p>
-                Masih. Di e-book dibahas cara mencari keunikan layanan (misalnya layanan ekspres, cuci khusus
-                selimut, atau jemput–antar) dan cara menentukan segmen pelanggan yang belum tersentuh
-                kompetitor sehingga Anda tidak perang harga semata.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="faq-item">
-            <div class="faq-item-header">
-              <div class="faq-question">
-                4. Rumah saya tidak terlalu luas, apakah tetap bisa memulai dari rumah?
-              </div>
-              <div class="faq-toggle">+</div>
-            </div>
-            <div class="faq-item-body">
-              <p>
-                Bisa. Panduan ini fokus pada konsep <strong>laundry rumahan</strong>, sehingga ada tips khusus
-                menata ruang sempit, menempatkan mesin, area jemur, dan ruang setrika agar tetap rapi
-                dan tidak mengganggu aktivitas keluarga di rumah.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="faq-item">
-            <div class="faq-item-header">
-              <div class="faq-question">
-                5. File e-book-nya dalam bentuk apa? Apakah bisa dibaca lewat HP?
-              </div>
-              <div class="faq-toggle">+</div>
-            </div>
-            <div class="faq-item-body">
-              <p>
-                E-book dikirim dalam format <strong>PDF</strong> sehingga bisa dibaca melalui HP, tablet,
-                maupun laptop. Anda bisa menyimpannya di WhatsApp, Google Drive, atau memori perangkat,
-                dan membacanya kapan saja tanpa harus selalu online.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ 6 -->
-          <div class="faq-item">
-            <div class="faq-item-header">
-              <div class="faq-question">
-                6. Kalau setelah membaca saya masih bingung, apakah ada tempat bertanya?
-              </div>
-              <div class="faq-toggle">+</div>
-            </div>
-            <div class="faq-item-body">
-              <p>
-                Setelah pembelian, Anda akan mendapatkan kontak WhatsApp admin.
-                Anda bisa menghubungi admin jika ada bagian yang kurang jelas,
-                misalnya terkait perhitungan modal atau penyusunan paket layanan laundry.
-              </p>
-            </div>
-          </div>
-
-          <!-- POPUP NOTIF -->
-          <div id="notifBox" class="popup-notif">
-            <div class="notif-avatar" id="notifAvatar">R</div>
-            <div>
-              <div class="notif-name">
-                <span id="notifName">Rani</span> · <span id="notifCity">Depok</span>
-              </div>
-              <div class="notif-job" id="notifJob">Karyawan Swasta</div>
-              <div class="notif-text" id="notifText">
-                ✅ Baru download e-book & bonus lengkap!
-              </div>
-              <div class="notif-time" id="notifTime">1 menit yang lalu</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- JS slider testimoni + FAQ -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      /* === SLIDER TESTIMONI === */
-      const dots  = document.querySelectorAll('.testimonial-dot');
-      const cards = document.querySelectorAll('.testimonial-card');
-
-      if (dots.length && cards.length) {
-        dots.forEach(function (dot) {
-          dot.addEventListener('click', function () {
-            const index = this.getAttribute('data-index');
-
-            dots.forEach(d => d.classList.remove('active'));
-            cards.forEach(c => c.classList.remove('active'));
-
-            this.classList.add('active');
-            cards[index].classList.add('active');
+              this.classList.add('active');
+              cards[index].classList.add('active');
+            });
           });
-        });
-      }
-
-      /* === FAQ ACCORDION === */
-      const faqItems   = document.querySelectorAll('.faq-item');
-      const faqHeaders = document.querySelectorAll('.faq-item-header');
-
-      // set icon awal
-      faqItems.forEach(item => {
-        const toggle = item.querySelector('.faq-toggle');
-        if (!toggle) return;
-        if (item.classList.contains('open')) {
-          toggle.textContent = '×';
-        } else {
-          toggle.textContent = '+';
         }
-      });
 
-      faqHeaders.forEach(header => {
-        header.addEventListener('click', function () {
-          const item = this.parentElement;
-          const isOpen = item.classList.contains('open');
+        /* === FAQ ACCORDION === */
+        const faqItems   = document.querySelectorAll('.faq-item');
+        const faqHeaders = document.querySelectorAll('.faq-item-header');
 
-          // tutup semua dulu
-          faqItems.forEach(i => {
-            i.classList.remove('open');
-            const t = i.querySelector('.faq-toggle');
-            if (t) t.textContent = '+';
+        faqItems.forEach(item => {
+          const toggle = item.querySelector('.faq-toggle');
+          if (!toggle) return;
+          toggle.textContent = item.classList.contains('open') ? '×' : '+';
+        });
+
+        faqHeaders.forEach(header => {
+          header.addEventListener('click', function () {
+            const item = this.parentElement;
+            const isOpen = item.classList.contains('open');
+
+            faqItems.forEach(i => {
+              i.classList.remove('open');
+              const t = i.querySelector('.faq-toggle');
+              if (t) t.textContent = '+';
+            });
+
+            if (!isOpen) {
+              item.classList.add('open');
+              const t = item.querySelector('.faq-toggle');
+              if (t) t.textContent = '×';
+            }
           });
+        });
 
-          // kalau sebelumnya belum terbuka, buka item ini
-          if (!isOpen) {
-            item.classList.add('open');
-            const t = item.querySelector('.faq-toggle');
-            if (t) t.textContent = '×';
-          }
+        /* === SMOOTH SCROLL UNTUK LINK ANCHOR (#paket) === */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
         });
       });
-    });
 
-    const notifBox = document.getElementById("notifBox");
-    const nameEl = document.getElementById("notifName");
-    const cityEl = document.getElementById("notifCity");
-    const jobEl = document.getElementById("notifJob");
-    const textEl = document.getElementById("notifText");
-    const timeEl = document.getElementById("notifTime");
-    const avatarEl = document.getElementById("notifAvatar");
+      /* === POPUP NOTIF OTOMATIS === */
+      const notifBox   = document.getElementById("notifBox");
+      const nameEl     = document.getElementById("notifName");
+      const cityEl     = document.getElementById("notifCity");
+      const jobEl      = document.getElementById("notifJob");
+      const textEl     = document.getElementById("notifText");
+      const timeEl     = document.getElementById("notifTime");
+      const avatarEl   = document.getElementById("notifAvatar");
 
-    // DATA — bebas kamu tambah
-    const data = [
-      {
-        name: "Abdul",
-        city: "Bandung",
-        job: "Ibu Rumah Tangga",
-        text: "Baru download e-book & bonus lengkap!",
-        time: "10 menit yang lalu"
-      },
-      {
-        name: "diky",
-        city: "Depok",
-        job: "Karyawan Swasta",
-        text: "Berhasil beli paket lengkap laundry!",
-        time: "5 menit yang lalu"
-      },
-      {
-        name: "Fajar",
-        city: "Bogor",
-        job: "Mahasiswa",
-        text: "Baru download e-book panduan laundry!",
-        time: "2 menit yang lalu"
-      },
-      {
-        name: "Dewi",
-        city: "Tangerang",
-        job: "Ibu Rumah Tangga",
-        text: "Baru mengambil paket promo hari ini!",
-        time: "7 menit yang lalu"
+      const data = [
+        {
+          name: "Abdul",
+          city: "Bandung",
+          job: "Ibu Rumah Tangga",
+          text: "Baru download e-book & bonus lengkap!",
+          time: "10 menit yang lalu"
+        },
+        {
+          name: "Diky",
+          city: "Depok",
+          job: "Karyawan Swasta",
+          text: "Berhasil beli paket lengkap laundry!",
+          time: "5 menit yang lalu"
+        },
+        {
+          name: "Fajar",
+          city: "Bogor",
+          job: "Mahasiswa",
+          text: "Baru download e-book panduan laundry!",
+          time: "2 menit yang lalu"
+        },
+        {
+          name: "Dewi",
+          city: "Tangerang",
+          job: "Ibu Rumah Tangga",
+          text: "Baru mengambil paket promo hari ini!",
+          time: "7 menit yang lalu"
+        }
+      ];
+
+      let indexNotif = 0;
+
+      function showNotif() {
+        const d = data[indexNotif];
+
+        nameEl.textContent   = d.name;
+        cityEl.textContent   = d.city;
+        jobEl.textContent    = d.job;
+        textEl.textContent   = "✅ " + d.text;
+        timeEl.textContent   = d.time;
+        avatarEl.textContent = d.name.charAt(0).toUpperCase();
+
+        notifBox.classList.add("show");
+
+        setTimeout(() => {
+          notifBox.classList.remove("show");
+        }, 4000);
+
+        indexNotif = (indexNotif + 1) % data.length;
       }
-    ];
 
-    let indexNotif = 0;
-
-    function showNotif() {
-      const d = data[indexNotif];
-
-      nameEl.textContent = d.name;
-      cityEl.textContent = d.city;
-      jobEl.textContent = d.job;
-      textEl.textContent = "✅ " + d.text;
-      timeEl.textContent = d.time;
-
-      avatarEl.textContent = d.name.charAt(0);
-
-      notifBox.classList.add("show");
-
-      setTimeout(() => {
-        notifBox.classList.remove("show");
-      }, 4000);
-
-      indexNotif = (indexNotif + 1) % data.length;
-    }
-
-    showNotif();
-    setInterval(showNotif, 9000);
-  </script>
-</body>
-</html>
+      showNotif();
+      setInterval(showNotif, 9000);
+    </script>
+  </body>
+  </html>
